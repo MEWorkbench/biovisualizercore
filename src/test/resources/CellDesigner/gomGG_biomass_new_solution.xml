@@ -1,0 +1,1120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2" xmlns:celldesigner="http://www.sbml.org/2001/ns/celldesigner" level="2" version="1">
+  <model id="test">
+    <annotation>
+<celldesigner:modelVersion>4.0</celldesigner:modelVersion>
+			<celldesigner:modelDisplay sizeX="5000" sizeY="5000"/>
+			<celldesigner:listOfCompartmentAliases>
+				<celldesigner:compartmentAlias compartment="internal" id="ca1">
+					<celldesigner:class>SQUARE</celldesigner:class>
+					<celldesigner:bounds h="5000.0" w="5000.0" x="10.0" y="10.0"/>
+					<celldesigner:namePoint x="2487.5" y="4973.5"/>
+					<celldesigner:doubleLine innerWidth="1.0" outerWidth="2.0" thickness="12.0"/>
+					<celldesigner:paint color="ffcccc00" scheme="Color"/>
+				</celldesigner:compartmentAlias>
+			</celldesigner:listOfCompartmentAliases>
+			<celldesigner:listOfComplexSpeciesAliases/>
+			<celldesigner:listOfSpeciesAliases>
+				<celldesigner:speciesAlias id="n2" species="F6P">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="1432.6" y="628.3"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="1432.6" y="628.3"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="1432.6" y="628.3"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n0" species="F16P">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="1432.6" y="927.3"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="1432.6" y="927.3"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="1432.6" y="927.3"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="CAT_FBP1" species="CAT_FBP1">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="30.0" w="100.0" x="1603.6" y="779.8"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="1593.6" y="769.8"/>
+						<celldesigner:boxSize height="30.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffcc99ff" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="0.0" y="0.0"/>
+						<celldesigner:boxSize height="4.0" width="13.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="CAT_PFK1_PFK2" species="CAT_PFK1_PFK2">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="30.0" w="100.0" x="1283.6" y="778.8"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="1273.6" y="768.8"/>
+						<celldesigner:boxSize height="30.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffcc99ff" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="0.0" y="0.0"/>
+						<celldesigner:boxSize height="4.0" width="13.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n103" species="ATP">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="35.0" x="1283.25899692101" y="728.631389406263"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="1283.25899692101" y="728.631389406263"/>
+						<celldesigner:boxSize height="35.0" width="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="1283.25899692101" y="728.631389406263"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n104" species="ADP">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="35.0" x="1283.25899692101" y="835.470624069223"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="1283.25899692101" y="835.470624069223"/>
+						<celldesigner:boxSize height="35.0" width="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="1283.25899692101" y="835.470624069223"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n81" species="BIOMASS">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="478.216170123911" y="601.04833922991"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="468.216170123911" y="591.04833922991"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffcc00" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="480.216170123911" y="605.04833922991"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="CAT_BIOMASSX" species="CAT_BIOMASSX">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="30.0" w="100.0" x="649.030201167644" y="673.816180227263"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="639.030201167644" y="663.816180227263"/>
+						<celldesigner:boxSize height="30.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffcc99ff" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="0.0" y="0.0"/>
+						<celldesigner:boxSize height="4.0" width="13.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n84" species="G6P">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="819.476056674222" y="602.243317968072"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="809.476056674222" y="592.243317968072"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="997.476056674222" y="812.243317968072"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n73" species="PYR">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="995.476056674222" y="826.669358632172"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="985.476056674222" y="816.669358632172"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="997.476056674222" y="705.669358632172"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n92" species="NADPHcyt">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="35.0" x="607.711467344055" y="352.02748890245397"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="597.711467344055" y="342.02748890245397"/>
+						<celldesigner:boxSize height="35.0" width="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="592.711467344055" y="428.027488902454"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n78" species="GP">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="991.476056674222" y="728.95238313787"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="981.476056674222" y="718.95238313787"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="997.476056674222" y="604.95238313787"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n72" species="PEP">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="995.476056674222" y="776.527391802025"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="985.476056674222" y="766.527391802025"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="997.476056674222" y="655.527391802025"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n91" species="NADPHmit">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="35.0" x="607.711467344055" y="408.545918365831"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="597.711467344055" y="398.545918365831"/>
+						<celldesigner:boxSize height="35.0" width="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="592.711467344055" y="484.545918365831"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n74" species="ACCOAmit">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="979.476056674222" y="215.97804397776702"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="969.476056674222" y="205.97804397776702"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="997.476056674222" y="325.978043977767"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n77" species="P3G">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="979.476056674222" y="442.49078979223805"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="969.476056674222" y="432.49078979223805"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="997.476056674222" y="552.490789792238"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n99" species="ATP">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="35.0" x="607.711467344055" y="464.57609427046805"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="597.711467344055" y="454.57609427046805"/>
+						<celldesigner:boxSize height="35.0" width="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="592.711467344055" y="540.576094270468"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n95" species="NADmit">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="35.0" x="607.711467344055" y="295.29209263368506"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="597.711467344055" y="285.29209263368506"/>
+						<celldesigner:boxSize height="35.0" width="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="592.711467344055" y="371.292092633685"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n98" species="NADcyt">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="35.0" x="607.711467344055" y="244.17897034927904"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="597.711467344055" y="234.17897034927904"/>
+						<celldesigner:boxSize height="35.0" width="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="592.711467344055" y="320.178970349279"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n83" species="R5P">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="995.476056674222" y="877.683119984692"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="985.476056674222" y="867.683119984692"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="997.476056674222" y="756.683119984692"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n75" species="ACCOAcyt">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="979.476056674222" y="271.821187610652"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="969.476056674222" y="261.821187610652"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="997.476056674222" y="381.821187610652"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n79" species="E4P">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="979.476056674222" y="389.365089654206"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="969.476056674222" y="379.365089654206"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="997.476056674222" y="499.365089654206"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n76" species="AKG">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="979.476056674222" y="327.664331243538"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="969.476056674222" y="317.664331243538"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="997.476056674222" y="437.664331243538"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n82" species="OAA">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="100.0" x="998.476056674222" y="924.750883855261"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="988.476056674222" y="914.750883855261"/>
+						<celldesigner:boxSize height="35.0" width="100.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="997.476056674222" y="865.750883855261"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n94" species="NADHcyt">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="35.0" x="423.711467344055" y="244.45336722503305"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="413.711467344055" y="234.45336722503305"/>
+						<celldesigner:boxSize height="35.0" width="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="592.711467344055" y="676.453367225033"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n97" species="NADPcyt">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="35.0" x="423.711467344055" y="352.719520589994"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="413.711467344055" y="342.719520589994"/>
+						<celldesigner:boxSize height="35.0" width="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="592.711467344055" y="784.719520589994"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n100" species="ADP">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="35.0" x="423.711467344055" y="453.35005912667305"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="413.711467344055" y="443.35005912667305"/>
+						<celldesigner:boxSize height="35.0" width="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="592.711467344055" y="885.350059126673"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n96" species="NADPmit">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="35.0" x="423.711467344055" y="404.867162070703"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="413.711467344055" y="394.867162070703"/>
+						<celldesigner:boxSize height="35.0" width="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="592.711467344055" y="836.867162070703"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n93" species="NADHmit">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds h="35.0" w="35.0" x="423.711467344055" y="297.32178135285506"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="413.711467344055" y="287.32178135285506"/>
+						<celldesigner:boxSize height="35.0" width="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="592.711467344055" y="729.321781352855"/>
+						<celldesigner:boxSize height="6.0" width="8.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+			</celldesigner:listOfSpeciesAliases>
+			<celldesigner:listOfGroups/>
+			<celldesigner:listOfProteins/>
+			<celldesigner:listOfGenes/>
+			<celldesigner:listOfRNAs/>
+			<celldesigner:listOfAntisenseRNAs/>
+			<celldesigner:listOfLayers/>
+			<celldesigner:listOfBlockDiagrams/>
+		    </annotation>
+    <listOfCompartments>
+      <compartment id="default" size="1"/>
+      <compartment id="internal" name="internal" outside="default" size="1">
+        <annotation>
+<celldesigner:name>internal</celldesigner:name>
+				        </annotation>
+</compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="CAT_FBP1" initialAmount="0" name="CAT_FBP1" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>PHENOTYPE</celldesigner:class>
+						<celldesigner:name>CAT_FBP1</celldesigner:name>
+					</celldesigner:speciesIdentity>
+					<celldesigner:listOfCatalyzedReactions>
+						<celldesigner:catalyzed reaction="FBP1"/>
+					</celldesigner:listOfCatalyzedReactions>
+				        </annotation>
+</species>
+      <species id="CAT_PFK1_PFK2" initialAmount="0" name="CAT_PFK1_PFK2" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>PHENOTYPE</celldesigner:class>
+						<celldesigner:name>CAT_PFK1_PFK2</celldesigner:name>
+					</celldesigner:speciesIdentity>
+					<celldesigner:listOfCatalyzedReactions>
+						<celldesigner:catalyzed reaction="PFK1_PFK2"/>
+					</celldesigner:listOfCatalyzedReactions>
+				        </annotation>
+</species>
+      <species id="F6P" initialAmount="0" name="F6P" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>F6P</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="F16P" initialAmount="0" name="F16P" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>F16P</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="ADP" initialAmount="0" name="ADP" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>ADP</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="ATP" initialAmount="0" name="ATP" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>ATP</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="BIOMASS" initialAmount="0" name="BIOMASS" compartment="default">
+        <annotation>
+<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>BIOMASS</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="CAT_BIOMASSX" initialAmount="0" name="CAT_BIOMASSX" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>PHENOTYPE</celldesigner:class>
+						<celldesigner:name>CAT_BIOMASSX</celldesigner:name>
+					</celldesigner:speciesIdentity>
+						<celldesigner:listOfCatalyzedReactions>
+						<celldesigner:catalyzed reaction="BIOMASSX"/>
+					</celldesigner:listOfCatalyzedReactions>
+				        </annotation>
+</species>
+      <species id="G6P" initialAmount="0" name="G6P" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>G6P</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="PYR" initialAmount="0" name="PYR" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>PYR</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="NADPHcyt" initialAmount="0" name="NADPHcyt" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>NADPHcyt</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="GP" initialAmount="0" name="GP" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>GP</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="PEP" initialAmount="0" name="PEP" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>PEP</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="NADPHmit" initialAmount="0" name="NADPHmit" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>NADPHmit</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="ACCOAmit" initialAmount="0" name="ACCOAmit" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>ACCOAmit</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="P3G" initialAmount="0" name="P3G" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>P3G</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="NADmit" initialAmount="0" name="NADmit" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>NADmit</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="NADcyt" initialAmount="0" name="NADcyt" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>NADcyt</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="R5P" initialAmount="0" name="R5P" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>R5P</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="ACCOAcyt" initialAmount="0" name="ACCOAcyt" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>ACCOAcyt</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="E4P" initialAmount="0" name="E4P" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>E4P</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="AKG" initialAmount="0" name="AKG" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>AKG</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="OAA" initialAmount="0" name="OAA" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>OAA</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="NADHcyt" initialAmount="0" name="NADHcyt" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>NADHcyt</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="NADPcyt" initialAmount="0" name="NADPcyt" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>NADPcyt</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="NADPmit" initialAmount="0" name="NADPmit" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>NADPmit</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+      <species id="NADHmit" initialAmount="0" name="NADHmit" compartment="internal">
+        <annotation>
+<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>NADHmit</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				        </annotation>
+</species>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="FBP1" reversible="false">
+        <annotation>
+<celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+					<celldesigner:baseReactants>
+						<celldesigner:baseReactant alias="n0" species="F16P">
+							<celldesigner:linkAnchor position="E"/>
+						</celldesigner:baseReactant>
+					</celldesigner:baseReactants>
+					<celldesigner:baseProducts>
+						<celldesigner:baseProduct alias="n2" species="F6P">
+							<celldesigner:linkAnchor position="E"/>
+						</celldesigner:baseProduct>
+					</celldesigner:baseProducts>
+					<celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+						<celldesigner:listOfLineDirection>
+							<celldesigner:lineDirection index="0" value="unknown"/>
+						</celldesigner:listOfLineDirection>
+					</celldesigner:connectScheme>
+					<celldesigner:line color="ffcc0000" width="5.0"/>
+					<celldesigner:listOfModification>
+						<celldesigner:modification aliases="CAT_FBP1" modifiers="CAT_FBP1" targetLineIndex="-1,2" type="CATALYSIS">
+							<celldesigner:connectScheme connectPolicy="direct">
+								<celldesigner:listOfLineDirection>
+									<celldesigner:lineDirection index="0" value="unknown"/>
+								</celldesigner:listOfLineDirection>
+							</celldesigner:connectScheme>
+							<celldesigner:line color="ff000000" width="1.0"/>
+						</celldesigner:modification>
+					</celldesigner:listOfModification>
+				        </annotation>
+        <listOfReactants>
+          <speciesReference species="F16P">
+            <annotation>
+<celldesigner:alias>n0</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="F6P">
+            <annotation>
+<celldesigner:alias>n2</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="CAT_FBP1">
+            <annotation>
+<celldesigner:alias>CAT_FBP1</celldesigner:alias>
+						            </annotation>
+</modifierSpeciesReference>
+        </listOfModifiers>
+      </reaction>
+      <reaction id="PFK1_PFK2" reversible="false">
+        <annotation>
+<celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+					<celldesigner:baseReactants>
+						<celldesigner:baseReactant alias="n2" species="F6P">
+							<celldesigner:linkAnchor position="W"/>
+						</celldesigner:baseReactant>
+					</celldesigner:baseReactants>
+					<celldesigner:baseProducts>
+						<celldesigner:baseProduct alias="n0" species="F16P">
+							<celldesigner:linkAnchor position="W"/>
+						</celldesigner:baseProduct>
+					</celldesigner:baseProducts>
+					<celldesigner:listOfReactantLinks>
+						<celldesigner:reactantLink alias="n103" reactant="ATP" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="17.07940033314825"/>
+						</celldesigner:reactantLink>
+					</celldesigner:listOfReactantLinks>
+					<celldesigner:listOfProductLinks>
+						<celldesigner:productLink alias="n104" product="ADP" targetLineIndex="-1,1">
+							<celldesigner:line color="ffcc0000" type="Curve" width="17.07940033314825"/>
+						</celldesigner:productLink>
+					</celldesigner:listOfProductLinks>
+					<celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+						<celldesigner:listOfLineDirection>
+							<celldesigner:lineDirection index="0" value="unknown"/>
+						</celldesigner:listOfLineDirection>
+					</celldesigner:connectScheme>
+					<celldesigner:line color="ffcc0000" width="17.07940033314825"/>
+					<celldesigner:listOfModification>
+						<celldesigner:modification aliases="CAT_PFK1_PFK2" modifiers="CAT_PFK1_PFK2" targetLineIndex="-1,2" type="CATALYSIS">
+							<celldesigner:connectScheme connectPolicy="direct">
+								<celldesigner:listOfLineDirection>
+									<celldesigner:lineDirection index="0" value="unknown"/>
+								</celldesigner:listOfLineDirection>
+							</celldesigner:connectScheme>
+							<celldesigner:line color="ff000000" width="1.0"/>
+						</celldesigner:modification>
+					</celldesigner:listOfModification>
+				        </annotation>
+        <listOfReactants>
+          <speciesReference species="F6P">
+            <annotation>
+<celldesigner:alias>n2</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="ATP">
+            <annotation>
+<celldesigner:alias>n103</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="F16P">
+            <annotation>
+<celldesigner:alias>n0</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="ADP">
+            <annotation>
+<celldesigner:alias>n104</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="CAT_PFK1_PFK2">
+            <annotation>
+<celldesigner:alias>CAT_PFK1_PFK2</celldesigner:alias>
+						            </annotation>
+</modifierSpeciesReference>
+        </listOfModifiers>
+      </reaction>
+      <reaction id="BIOMASSX" name="BIOMASSX" reversible="false">
+        <annotation>
+<celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+					<celldesigner:baseReactants>
+						<celldesigner:baseReactant alias="n84" species="G6P"/>
+					</celldesigner:baseReactants>
+					<celldesigner:baseProducts>
+						<celldesigner:baseProduct alias="n81" species="BIOMASS"/>
+					</celldesigner:baseProducts>
+					<celldesigner:listOfReactantLinks>
+						<celldesigner:reactantLink alias="n73" reactant="PYR" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n92" reactant="NADPHcyt" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n78" reactant="GP" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n72" reactant="PEP" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n91" reactant="NADPHmit" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n74" reactant="ACCOAmit" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n77" reactant="P3G" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n99" reactant="ATP" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n95" reactant="NADmit" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n98" reactant="NADcyt" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n83" reactant="R5P" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n75" reactant="ACCOAcyt" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n79" reactant="E4P" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n76" reactant="AKG" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+						<celldesigner:reactantLink alias="n82" reactant="OAA" targetLineIndex="-1,0">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:reactantLink>
+					</celldesigner:listOfReactantLinks>
+					<celldesigner:listOfProductLinks>
+						<celldesigner:productLink alias="n94" product="NADHcyt" targetLineIndex="-1,1">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:productLink>
+						<celldesigner:productLink alias="n97" product="NADPcyt" targetLineIndex="-1,1">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:productLink>
+						<celldesigner:productLink alias="n100" product="ADP" targetLineIndex="-1,1">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:productLink>
+						<celldesigner:productLink alias="n96" product="NADPmit" targetLineIndex="-1,1">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:productLink>
+						<celldesigner:productLink alias="n93" product="NADHmit" targetLineIndex="-1,1">
+							<celldesigner:line color="ffcc0000" type="Curve" width="30.0"/>
+						</celldesigner:productLink>
+					</celldesigner:listOfProductLinks>
+					<celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+						<celldesigner:listOfLineDirection>
+							<celldesigner:lineDirection index="0" value="unknown"/>
+						</celldesigner:listOfLineDirection>
+					</celldesigner:connectScheme>
+					<celldesigner:line color="ffcc0000" width="30.0"/>
+					<celldesigner:listOfModification>
+						<celldesigner:modification aliases="CAT_BIOMASSX" modifiers="CAT_BIOMASSX" targetLineIndex="-1,2" type="CATALYSIS">
+							<celldesigner:connectScheme connectPolicy="direct">
+								<celldesigner:listOfLineDirection>
+									<celldesigner:lineDirection index="0" value="unknown"/>
+								</celldesigner:listOfLineDirection>
+							</celldesigner:connectScheme>
+							<celldesigner:line color="ff000000" width="1.0"/>
+						</celldesigner:modification>
+					</celldesigner:listOfModification>
+				        </annotation>
+        <listOfReactants>
+          <speciesReference species="G6P" stoichiometry="25">
+            <annotation>
+<celldesigner:alias>n84</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="PYR" stoichiometry="18">
+            <annotation>
+<celldesigner:alias>n73</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="NADPHcyt" stoichiometry="90">
+            <annotation>
+<celldesigner:alias>n92</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="GP">
+            <annotation>
+<celldesigner:alias>n78</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="PEP" stoichiometry="6">
+            <annotation>
+<celldesigner:alias>n72</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="NADPHmit" stoichiometry="22">
+            <annotation>
+<celldesigner:alias>n91</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="ACCOAmit" stoichiometry="3">
+            <annotation>
+<celldesigner:alias>n74</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="P3G" stoichiometry="6">
+            <annotation>
+<celldesigner:alias>n77</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="ATP" stoichiometry="254">
+            <annotation>
+<celldesigner:alias>n99</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="NADmit" stoichiometry="6">
+            <annotation>
+<celldesigner:alias>n95</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="NADcyt" stoichiometry="16">
+            <annotation>
+<celldesigner:alias>n98</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="R5P" stoichiometry="3">
+            <annotation>
+<celldesigner:alias>n83</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="ACCOAcyt" stoichiometry="24">
+            <annotation>
+<celldesigner:alias>n75</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="E4P" stoichiometry="3">
+            <annotation>
+<celldesigner:alias>n79</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="AKG" stoichiometry="11">
+            <annotation>
+<celldesigner:alias>n76</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="OAA" stoichiometry="10">
+            <annotation>
+<celldesigner:alias>n82</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="BIOMASS" stoichiometry="100">
+            <annotation>
+<celldesigner:alias>n81</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="NADHcyt" stoichiometry="16">
+            <annotation>
+<celldesigner:alias>n94</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="NADPcyt" stoichiometry="90">
+            <annotation>
+<celldesigner:alias>n97</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="ADP" stoichiometry="254">
+            <annotation>
+<celldesigner:alias>n100</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="NADPmit" stoichiometry="22">
+            <annotation>
+<celldesigner:alias>n96</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+          <speciesReference species="NADHmit" stoichiometry="6">
+            <annotation>
+<celldesigner:alias>n93</celldesigner:alias>
+						            </annotation>
+</speciesReference>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="CAT_BIOMASSX">
+            <annotation>
+<celldesigner:alias>CAT_BIOMASSX</celldesigner:alias>
+						            </annotation>
+</modifierSpeciesReference>
+        </listOfModifiers>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

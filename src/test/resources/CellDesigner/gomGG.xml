@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2" xmlns:celldesigner="http://www.sbml.org/2001/ns/celldesigner" level="2" version="1">
+	<model id="test">
+		<annotation>
+			<celldesigner:modelVersion>4.0</celldesigner:modelVersion>
+			<celldesigner:modelDisplay sizeX="5000" sizeY="5000"/>
+			<celldesigner:listOfCompartmentAliases>
+				<celldesigner:compartmentAlias id="ca1" compartment="internal">
+					<celldesigner:class>SQUARE</celldesigner:class>
+					<celldesigner:bounds x="10.0" y="10.0" w="5000.0" h="5000.0"/>
+					<celldesigner:namePoint x="2487.5" y="4973.5"/>
+					<celldesigner:doubleLine thickness="12.0" outerWidth="2.0" innerWidth="1.0"/>
+					<celldesigner:paint color="ffcccc00" scheme="Color"/>
+				</celldesigner:compartmentAlias>
+			</celldesigner:listOfCompartmentAliases>
+			<celldesigner:listOfComplexSpeciesAliases/>
+			<celldesigner:listOfSpeciesAliases>
+				<celldesigner:speciesAlias id="n2" species="F6P">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds x="1432.6" y="628.3" w="100.0" h="35.0"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="1432.6" y="628.3"/>
+						<celldesigner:boxSize width="100.0" height="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="1432.6" y="628.3"/>
+						<celldesigner:boxSize width="8.0" height="6.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n0" species="F16P">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds x="1432.6" y="927.3" w="100.0" h="35.0"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="1432.6" y="927.3"/>
+						<celldesigner:boxSize width="100.0" height="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffccff66" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="1432.6" y="927.3"/>
+						<celldesigner:boxSize width="8.0" height="6.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="CAT_FBP1" species="CAT_FBP1">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds x="1603.6" y="779.8" w="100.0" h="30.0"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="1593.6" y="769.8"/>
+						<celldesigner:boxSize width="100.0" height="30.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffcc99ff" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="0.0" y="0.0"/>
+						<celldesigner:boxSize width="13.0" height="4.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="CAT_PFK1_PFK2" species="CAT_PFK1_PFK2">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds x="1283.6" y="778.8" w="100.0" h="30.0"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="1273.6" y="768.8"/>
+						<celldesigner:boxSize width="100.0" height="30.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffcc99ff" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="0.0" y="0.0"/>
+						<celldesigner:boxSize width="13.0" height="4.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n103" species="ATP">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds x="1283.25899692101" y="728.631389406263" w="35.0" h="35.0"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="1283.25899692101" y="728.631389406263"/>
+						<celldesigner:boxSize width="35.0" height="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="1283.25899692101" y="728.631389406263"/>
+						<celldesigner:boxSize width="8.0" height="6.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+				<celldesigner:speciesAlias id="n104" species="ADP">
+					<celldesigner:activity>inactive</celldesigner:activity>
+					<celldesigner:bounds x="1283.25899692101" y="835.470624069223" w="35.0" h="35.0"/>
+					<celldesigner:view state="usual"/>
+					<celldesigner:usualView>
+						<celldesigner:innerPosition x="1283.25899692101" y="835.470624069223"/>
+						<celldesigner:boxSize width="35.0" height="35.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="ffffff99" scheme="Color"/>
+					</celldesigner:usualView>
+					<celldesigner:briefView>
+						<celldesigner:innerPosition x="1283.25899692101" y="835.470624069223"/>
+						<celldesigner:boxSize width="8.0" height="6.0"/>
+						<celldesigner:singleLine width="1.0"/>
+						<celldesigner:paint color="3fff0000" scheme="Color"/>
+					</celldesigner:briefView>
+				</celldesigner:speciesAlias>
+			</celldesigner:listOfSpeciesAliases>
+			<celldesigner:listOfGroups/>
+			<celldesigner:listOfProteins/>
+			<celldesigner:listOfGenes/>
+			<celldesigner:listOfRNAs/>
+			<celldesigner:listOfAntisenseRNAs/>
+			<celldesigner:listOfLayers/>
+			<celldesigner:listOfBlockDiagrams/>
+		</annotation>
+		<listOfCompartments>
+			<compartment id="default" size="1"/>
+			<compartment id="internal" name="internal" size="1" outside="default">
+				<annotation>
+					<celldesigner:name>internal</celldesigner:name>
+				</annotation>
+			</compartment>
+		</listOfCompartments>
+		<listOfSpecies>
+			<species id="CAT_FBP1" name="CAT_FBP1" compartment="internal" initialAmount="0">
+				<annotation>
+					<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>PHENOTYPE</celldesigner:class>
+						<celldesigner:name>CAT_FBP1</celldesigner:name>
+					</celldesigner:speciesIdentity>
+					<celldesigner:listOfCatalyzedReactions>
+						<celldesigner:catalyzed reaction="FBP1"/>
+					</celldesigner:listOfCatalyzedReactions>
+				</annotation>
+			</species>
+			<species id="CAT_PFK1_PFK2" name="CAT_PFK1_PFK2" compartment="internal" initialAmount="0">
+				<annotation>
+					<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>PHENOTYPE</celldesigner:class>
+						<celldesigner:name>CAT_PFK1_PFK2</celldesigner:name>
+					</celldesigner:speciesIdentity>
+					<celldesigner:listOfCatalyzedReactions>
+						<celldesigner:catalyzed reaction="PFK1_PFK2"/>
+					</celldesigner:listOfCatalyzedReactions>
+				</annotation>
+			</species>
+			<species id="F6P" name="F6P" compartment="internal" initialAmount="0">
+				<annotation>
+					<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>F6P</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				</annotation>
+			</species>
+			<species id="F16P" name="F16P" compartment="internal" initialAmount="0">
+				<annotation>
+					<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>F16P</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				</annotation>
+			</species>
+			<species id="ADP" name="ADP" compartment="internal" initialAmount="0">
+				<annotation>
+					<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>ADP</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				</annotation>
+			</species>
+			<species id="ATP" name="ATP" compartment="internal" initialAmount="0">
+				<annotation>
+					<celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+					<celldesigner:speciesIdentity>
+						<celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+						<celldesigner:name>ATP</celldesigner:name>
+					</celldesigner:speciesIdentity>
+				</annotation>
+			</species>
+		</listOfSpecies>
+		<listOfReactions>
+			<reaction id="FBP1" reversible="false">
+				<annotation>
+					<celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+					<celldesigner:baseReactants>
+						<celldesigner:baseReactant species="F16P" alias="n0">
+							<celldesigner:linkAnchor position="E"/>
+						</celldesigner:baseReactant>
+					</celldesigner:baseReactants>
+					<celldesigner:baseProducts>
+						<celldesigner:baseProduct species="F6P" alias="n2">
+							<celldesigner:linkAnchor position="E"/>
+						</celldesigner:baseProduct>
+					</celldesigner:baseProducts>
+					<celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+						<celldesigner:listOfLineDirection>
+							<celldesigner:lineDirection index="0" value="unknown"/>
+						</celldesigner:listOfLineDirection>
+					</celldesigner:connectScheme>
+					<celldesigner:line width="5.0" color="ffcc0000"/>
+					<celldesigner:listOfModification>
+						<celldesigner:modification type="CATALYSIS" modifiers="CAT_FBP1" aliases="CAT_FBP1" targetLineIndex="-1,2">
+							<celldesigner:connectScheme connectPolicy="direct">
+								<celldesigner:listOfLineDirection>
+									<celldesigner:lineDirection index="0" value="unknown"/>
+								</celldesigner:listOfLineDirection>
+							</celldesigner:connectScheme>
+							<celldesigner:line width="1.0" color="ff000000"/>
+						</celldesigner:modification>
+					</celldesigner:listOfModification>
+				</annotation>
+				<listOfReactants>
+					<speciesReference species="F16P">
+						<annotation>
+							<celldesigner:alias>n0</celldesigner:alias>
+						</annotation>
+					</speciesReference>
+				</listOfReactants>
+				<listOfProducts>
+					<speciesReference species="F6P">
+						<annotation>
+							<celldesigner:alias>n2</celldesigner:alias>
+						</annotation>
+					</speciesReference>
+				</listOfProducts>
+				<listOfModifiers>
+					<modifierSpeciesReference species="CAT_FBP1">
+						<annotation>
+							<celldesigner:alias>CAT_FBP1</celldesigner:alias>
+						</annotation>
+					</modifierSpeciesReference>
+				</listOfModifiers>
+			</reaction>
+			<reaction id="PFK1_PFK2" reversible="false">
+				<annotation>
+					<celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+					<celldesigner:baseReactants>
+						<celldesigner:baseReactant species="F6P" alias="n2">
+							<celldesigner:linkAnchor position="W"/>
+						</celldesigner:baseReactant>
+					</celldesigner:baseReactants>
+					<celldesigner:baseProducts>
+						<celldesigner:baseProduct species="F16P" alias="n0">
+							<celldesigner:linkAnchor position="W"/>
+						</celldesigner:baseProduct>
+					</celldesigner:baseProducts>
+					<celldesigner:listOfReactantLinks>
+						<celldesigner:reactantLink reactant="ATP" alias="n103" targetLineIndex="-1,0">
+							<celldesigner:line width="5.0" color="ffcc0000" type="Curve"/>
+						</celldesigner:reactantLink>
+					</celldesigner:listOfReactantLinks>
+					<celldesigner:listOfProductLinks>
+						<celldesigner:productLink product="ADP" alias="n104" targetLineIndex="-1,1">
+							<celldesigner:line width="5.0" color="ffcc0000" type="Curve"/>
+						</celldesigner:productLink>
+					</celldesigner:listOfProductLinks>
+					<celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+						<celldesigner:listOfLineDirection>
+							<celldesigner:lineDirection index="0" value="unknown"/>
+						</celldesigner:listOfLineDirection>
+					</celldesigner:connectScheme>
+					<celldesigner:line width="5.0" color="ffcc0000"/>
+					<celldesigner:listOfModification>
+						<celldesigner:modification type="CATALYSIS" modifiers="CAT_PFK1_PFK2" aliases="CAT_PFK1_PFK2" targetLineIndex="-1,2">
+							<celldesigner:connectScheme connectPolicy="direct">
+								<celldesigner:listOfLineDirection>
+									<celldesigner:lineDirection index="0" value="unknown"/>
+								</celldesigner:listOfLineDirection>
+							</celldesigner:connectScheme>
+							<celldesigner:line width="1.0" color="ff000000"/>
+						</celldesigner:modification>
+					</celldesigner:listOfModification>
+				</annotation>
+				<listOfReactants>
+					<speciesReference species="F6P">
+						<annotation>
+							<celldesigner:alias>n2</celldesigner:alias>
+						</annotation>
+					</speciesReference>
+					<speciesReference species="ATP">
+						<annotation>
+							<celldesigner:alias>n103</celldesigner:alias>
+						</annotation>
+					</speciesReference>
+				</listOfReactants>
+				<listOfProducts>
+					<speciesReference species="F16P">
+						<annotation>
+							<celldesigner:alias>n0</celldesigner:alias>
+						</annotation>
+					</speciesReference>
+					<speciesReference species="ADP">
+						<annotation>
+							<celldesigner:alias>n104</celldesigner:alias>
+						</annotation>
+					</speciesReference>
+				</listOfProducts>
+				<listOfModifiers>
+					<modifierSpeciesReference species="CAT_PFK1_PFK2">
+						<annotation>
+							<celldesigner:alias>CAT_PFK1_PFK2</celldesigner:alias>
+						</annotation>
+					</modifierSpeciesReference>
+				</listOfModifiers>
+			</reaction>
+		</listOfReactions>
+	</model>
+</sbml>
