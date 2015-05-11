@@ -26,10 +26,10 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-import pt.uminho.ceb.biosystems.mew.biocomponents.validation.io.JSBMLValidationException;
+
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.io.readers.ErrorsException;
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.io.readers.JSBMLReader;
-
+import pt.uminho.ceb.biosystems.mew.biocomponents.validation.io.JSBMLValidationException;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.CDContainer;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.LayoutContainer;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.components.NodeLay;

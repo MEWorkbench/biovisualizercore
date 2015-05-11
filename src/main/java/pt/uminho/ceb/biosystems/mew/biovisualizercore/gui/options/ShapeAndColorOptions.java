@@ -1,16 +1,5 @@
 package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options;
 
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.JTableUtils;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.SpinnerEditor;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.cellrender.ColorRenderer;
-
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.nodes.NodeDraw;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.shapes.ShapeTableCellEditor;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.ChangeColorEditor;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.ShapeTableCellRenderer;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.Constants;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.ShapeManager;
-
 import java.awt.Color;
 import java.awt.Component;
 import java.io.IOException;
@@ -22,6 +11,16 @@ import javax.swing.JTable;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.WindowConstants;
 import javax.swing.table.TableCellRenderer;
+
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.nodes.NodeDraw;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.shapes.ShapeTableCellEditor;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.ChangeColorEditor;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.ShapeTableCellRenderer;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.Constants;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.ShapeManager;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.JTableUtils;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.SpinnerEditor;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.cellrender.ColorRenderer;
 
 public class ShapeAndColorOptions extends AbstractTableOptions{
 	

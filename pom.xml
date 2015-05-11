@@ -4,7 +4,7 @@
 
   <groupId>pt.uminho.ceb.biosystems.mew</groupId>
   <artifactId>biovisualizercore</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <packaging>jar</packaging>
 
   <name>biovisualizercore</name>
@@ -25,22 +25,22 @@
     <dependency>
       <groupId>pt.uminho.ceb.biosystems.mew</groupId>
       <artifactId>utilities</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.1</version>
     </dependency>
     <dependency>
       <groupId>pt.uminho.ceb.biosystems.mew</groupId>
       <artifactId>biocomponents</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.1</version>
     </dependency>
     <dependency>
       <groupId>pt.uminho.ceb.biosystems.mew</groupId>
       <artifactId>mewcore</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.1</version>
     </dependency>
     <dependency>
       <groupId>pt.uminho.ceb.biosystems.mew</groupId>
       <artifactId>guiutilities</artifactId>
-      <version>0.0.1-SNAPSHOT</version>
+      <version>0.0.1</version>
     </dependency>
     
     <dependency>

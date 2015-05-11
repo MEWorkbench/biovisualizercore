@@ -16,7 +16,6 @@ import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.Container;
-
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.infopanels.kegg.KeggCompoundImagePanel;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.infopanels.multipleconditions.MultipleConditionsPlotPanel;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.infopanels.pathwaynavigation.PathwayNavigationPanel;

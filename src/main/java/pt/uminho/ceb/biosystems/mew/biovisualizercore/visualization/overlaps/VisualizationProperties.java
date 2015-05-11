@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.Container;
-
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.LayoutVisualizerGUI;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.AbstractLabelsConstructor;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.constructor.metabolite.MetLabelMethodIDs;

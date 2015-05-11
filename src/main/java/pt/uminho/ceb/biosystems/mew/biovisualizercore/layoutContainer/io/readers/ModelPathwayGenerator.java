@@ -8,7 +8,6 @@ import java.util.UUID;
 
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.Container;
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.components.ReactionCI;
-
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.LayoutContainer;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.components.NodeLay;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.components.ReactionLay;

@@ -1,19 +1,9 @@
 package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui;
 
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-import java.util.ArrayList;
-
-import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
-import javax.swing.JPanel;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.TitledBorder;
 
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.expandablePanel.ExpandablePanel;
-
-import java.awt.GridBagConstraints;
 
 /**
 * This code was edited or generated using CloudGarden's Jigloo

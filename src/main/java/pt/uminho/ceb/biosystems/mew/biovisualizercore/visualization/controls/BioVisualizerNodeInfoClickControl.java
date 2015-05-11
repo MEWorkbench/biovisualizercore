@@ -33,7 +33,6 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.LayoutVisualizator;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.renderers.BioVisualizerEdgeRenderer;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.LayoutUtils;
-
 import pt.uminho.ceb.biosystems.mew.utilities.datastructures.collection.CollectionUtils;
 
 /**

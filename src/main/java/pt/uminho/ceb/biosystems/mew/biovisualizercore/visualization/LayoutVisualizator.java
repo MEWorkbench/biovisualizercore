@@ -17,9 +17,6 @@ import java.util.UUID;
 
 import javax.swing.JPanel;
 
-import pt.uminho.ceb.biosystems.mew.utilities.datastructures.collection.CollectionUtils;
-import pt.uminho.ceb.biosystems.mew.utilities.datastructures.pair.Pair;
-
 import prefuse.Display;
 import prefuse.Visualization;
 import prefuse.action.ActionList;
@@ -71,6 +68,8 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.renderers.Bi
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.Constants;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.LayoutUtils;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.OptVisualExtensions;
+import pt.uminho.ceb.biosystems.mew.utilities.datastructures.collection.CollectionUtils;
+import pt.uminho.ceb.biosystems.mew.utilities.datastructures.pair.Pair;
 
 /**
  * This is the class where the {@link Visualization} is built and the {@link Display} generated.<br>

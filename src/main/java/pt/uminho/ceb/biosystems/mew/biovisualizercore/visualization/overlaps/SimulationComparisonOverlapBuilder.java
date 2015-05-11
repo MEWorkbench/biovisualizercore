@@ -8,7 +8,6 @@ import java.util.Set;
 
 import prefuse.util.ColorLib;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.LayoutUtils;
-
 import pt.uminho.ceb.biosystems.mew.utilities.datastructures.pair.Pair;
 
 public class SimulationComparisonOverlapBuilder {

@@ -42,6 +42,7 @@ import prefuse.Display;
 import prefuse.Visualization;
 import prefuse.util.GraphicsLib;
 import prefuse.util.display.DisplayLib;
+import pt.uminho.ceb.biosystems.mew.biocomponents.container.Container;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.ChangeLayoutListener;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.ILayout;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.INodeLay;
@@ -57,9 +58,6 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.Abs
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.IOverlapObject;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.VisualizationProperties;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.LayoutUtils;
-
-import pt.uminho.ceb.biosystems.mew.biocomponents.container.Container;
-
 import de.erichseifert.vectorgraphics2d.SVGGraphics2D;
 import de.erichseifert.vectorgraphics2d.VectorGraphics2D.FontRendering;
 

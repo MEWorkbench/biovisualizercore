@@ -25,11 +25,10 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
-import pt.uminho.ceb.biosystems.mew.utilities.graphics.GraphicsUtils;
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.Container;
-
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.MetaboliteEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.MetaboliteListener;
+import pt.uminho.ceb.biosystems.mew.utilities.graphics.GraphicsUtils;
 
 public class KeggCompoundImagePanel extends JPanel implements ComponentListener, MetaboliteListener {
 	

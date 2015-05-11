@@ -1,19 +1,18 @@
 package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.shapes;
 
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.SpinnerEditor;
-
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.AbstractTableColumnOptions;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.TableOptionsException;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.AbstractLabelsConstructor;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.ChangeColorEditor;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.ShapeManager;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.SpinnerNumberModel;
 import javax.swing.event.TableModelEvent;
 import javax.swing.table.TableCellEditor;
+
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.AbstractTableColumnOptions;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.TableOptionsException;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.AbstractLabelsConstructor;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.ChangeColorEditor;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.ShapeManager;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.SpinnerEditor;
 
 public class EdgeShapeTableOptions extends AbstractTableColumnOptions{
 	

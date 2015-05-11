@@ -13,7 +13,6 @@ import prefuse.Visualization;
 import prefuse.controls.ControlAdapter;
 import prefuse.data.Tuple;
 import prefuse.data.tuple.TupleSet;
-import prefuse.util.ColorLib;
 import prefuse.visual.AggregateItem;
 import prefuse.visual.AggregateTable;
 import prefuse.visual.VisualItem;

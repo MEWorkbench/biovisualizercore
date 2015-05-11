@@ -9,11 +9,7 @@ import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import pt.uminho.ceb.biosystems.mew.utilities.datastructures.pair.Pair;
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.Container;
-import pt.uminho.ceb.biosystems.mew.guiutilities.fonts.FontException;
-import pt.uminho.ceb.biosystems.mew.guiutilities.fonts.FontManager;
-
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.AbstractLabelsConstructor;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.IFactoryLabel;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.constructor.metabolite.MetLabelMethodIDs;
@@ -21,6 +17,9 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.constru
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.constructor.reaction.ReactionFactoryLabel;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.constructor.reaction.ReactionLabelMethodIDs;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.VisualizationProperties;
+import pt.uminho.ceb.biosystems.mew.guiutilities.fonts.FontException;
+import pt.uminho.ceb.biosystems.mew.guiutilities.fonts.FontManager;
+import pt.uminho.ceb.biosystems.mew.utilities.datastructures.pair.Pair;
 
 
 public class VPropertyConstants {

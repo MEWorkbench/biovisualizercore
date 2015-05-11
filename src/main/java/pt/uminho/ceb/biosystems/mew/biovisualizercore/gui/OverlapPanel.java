@@ -21,9 +21,7 @@ import javax.swing.JScrollPane;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.TitledBorder;
 
-import pt.uminho.ceb.biosystems.mew.utilities.datastructures.map.MapUtils;
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.Container;
-
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.io.LoadOverlapEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.io.LoadOverlapListener;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.io.LoadOverlapPanel;

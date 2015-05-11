@@ -16,10 +16,10 @@ import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.apache.jcs.JCS;
 import org.apache.jcs.access.exception.CacheException;
 import org.apache.jcs.engine.ElementAttributes;
 import org.apache.jcs.engine.control.CompositeCacheManager;
-import org.apache.jcs.JCS;
 
 /**
  * Provides a wrapper around Apache JCS (Java Caching System) to facilitate a "common case" 

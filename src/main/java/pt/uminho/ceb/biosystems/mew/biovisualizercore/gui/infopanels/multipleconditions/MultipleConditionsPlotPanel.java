@@ -1,7 +1,6 @@
 package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.infopanels.multipleconditions;
 
 import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import java.util.ArrayList;
@@ -11,14 +10,13 @@ import java.util.Set;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import pt.uminho.ceb.biosystems.mew.utilities.datastructures.collection.CollectionUtils;
-
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.MetaboliteEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.MetaboliteListener;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.OverlapEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.OverlapsListener;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.IOverlapObject;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.MultipleConditionsOverlap;
+import pt.uminho.ceb.biosystems.mew.utilities.datastructures.collection.CollectionUtils;
 
 import com.xeiam.xchart.Chart;
 import com.xeiam.xchart.ChartBuilder;

@@ -1,12 +1,5 @@
 package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.infopanels.pathwaynavigation;
 
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.JTableUtils;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.ButtonEditor;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.cellrender.ButtonRenderer;
-
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.MetaboliteEvent;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.MetaboliteListener;
-
 import java.awt.BorderLayout;
 import java.util.HashSet;
 import java.util.Map;
@@ -18,6 +11,12 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
+
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.MetaboliteEvent;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.MetaboliteListener;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.JTableUtils;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.ButtonEditor;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.cellrender.ButtonRenderer;
 
 public class PathwayNavigationPanel extends JPanel implements MetaboliteListener {
 	

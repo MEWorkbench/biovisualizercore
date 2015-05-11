@@ -2,7 +2,6 @@ package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.constr
 
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.Container;
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.components.ReactionCI;
-
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.IMethodLabelFactory;
 
 public abstract class AbstractReactionMethodLabelFactory implements IMethodLabelFactory<Container>{

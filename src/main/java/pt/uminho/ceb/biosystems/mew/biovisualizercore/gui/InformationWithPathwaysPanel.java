@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.Set;
 
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.Container;
-
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.OverlapEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.INodeLay;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.IReactionLay;

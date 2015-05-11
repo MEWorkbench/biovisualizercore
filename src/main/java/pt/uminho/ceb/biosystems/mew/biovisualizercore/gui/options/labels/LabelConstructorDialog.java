@@ -1,9 +1,5 @@
 package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels;
 
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.JTableUtils;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.ComboEditor;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.cellrender.ComboRenderer;
-
 import java.awt.Component;
 import java.awt.Dialog.ModalExclusionType;
 import java.awt.Dimension;
@@ -32,6 +28,9 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.JTableUtils;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.ComboEditor;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.cellrender.ComboRenderer;
 import pt.uminho.ceb.biosystems.mew.utilities.datastructures.pair.Pair;
 
 public class LabelConstructorDialog extends JComponent implements TableModelListener{

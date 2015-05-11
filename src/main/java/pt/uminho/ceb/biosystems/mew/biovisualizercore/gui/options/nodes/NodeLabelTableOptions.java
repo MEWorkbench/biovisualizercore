@@ -1,22 +1,5 @@
 package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.nodes;
 
-import pt.uminho.ceb.biosystems.mew.guiutilities.fonts.FontManager;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.JTableUtils;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.ComboEditor;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.FontTableEditor;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.SpinnerEditor;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.cellrender.ColorRenderer;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.cellrender.FontTableCellRenderer;
-
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.AbstractTableOptions;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.InfoNames;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.TableOptionsException;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.AbstractLabelsConstructor;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.FakeIMethods;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.ChangeColorEditor;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.LabelConstructorEditor;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.NodeLabelRenderer;
-
 import java.awt.Color;
 import java.awt.Font;
 import java.util.ArrayList;
@@ -26,6 +9,22 @@ import javax.swing.JFrame;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.WindowConstants;
 import javax.swing.event.TableModelEvent;
+
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.AbstractTableOptions;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.InfoNames;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.TableOptionsException;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.AbstractLabelsConstructor;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.FakeIMethods;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.ChangeColorEditor;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.LabelConstructorEditor;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.NodeLabelRenderer;
+import pt.uminho.ceb.biosystems.mew.guiutilities.fonts.FontManager;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.JTableUtils;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.ComboEditor;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.FontTableEditor;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.SpinnerEditor;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.cellrender.ColorRenderer;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.cellrender.FontTableCellRenderer;
 
 public class NodeLabelTableOptions extends AbstractTableOptions{
 	

@@ -5,12 +5,10 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import pt.uminho.ceb.biosystems.mew.utilities.datastructures.map.MapUtils;
-import pt.uminho.ceb.biosystems.mew.utilities.datastructures.pair.Pair;
-
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.ILayout;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.IReactionLay;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.Constants;
+import pt.uminho.ceb.biosystems.mew.utilities.datastructures.pair.Pair;
 
 public abstract class AbstractOverlapFactory {
 	

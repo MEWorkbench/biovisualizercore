@@ -1,9 +1,7 @@
 package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.expandablePanel;
 
 import java.awt.BorderLayout;
-import java.awt.Button;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;

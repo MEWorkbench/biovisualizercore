@@ -1,21 +1,20 @@
 package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels;
 
-import pt.uminho.ceb.biosystems.mew.guiutilities.fonts.FontManager;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.ComboEditor;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.FontTableEditor;
-import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.SpinnerEditor;
-
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.AbstractTableColumnOptions;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.TableOptionsException;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.ChangeColorEditor;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.LabelConstructorEditor;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.SpinnerNumberModel;
 import javax.swing.event.TableModelEvent;
 import javax.swing.table.TableCellEditor;
+
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.AbstractTableColumnOptions;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.TableOptionsException;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.ChangeColorEditor;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.tablerenders.LabelConstructorEditor;
+import pt.uminho.ceb.biosystems.mew.guiutilities.fonts.FontManager;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.ComboEditor;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.FontTableEditor;
+import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.SpinnerEditor;
 
 public class EdgeLabelTableOptions extends AbstractTableColumnOptions{
 	
