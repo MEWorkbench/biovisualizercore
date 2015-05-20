@@ -121,6 +121,10 @@
 	    <id>hgthirdparty</id>
 	    <url>http://193.137.11.210:8081/nexus/content/repositories/hgthirdparty</url>
 	  </repository>
+	  <repository>
+	    <id>biosystems-releases</id>
+	    <url>http://193.137.11.210:8081/nexus/content/repositories/biosystems-releases</url>
+	  </repository>
   </repositories>
   
   <distributionManagement>
