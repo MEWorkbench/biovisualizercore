@@ -28,7 +28,7 @@ public class ModelPathwayGenerator implements ILayoutBuilder{
 	Map<String, INodeLay> nodes;
 	Map<String, IReactionLay> reactions;
 	
-	int hubDefinition = 10000;
+	static int hubDefinition = 10000;
 	Set<String> cofactors;
 	
 	Map<String, ReactionCI> pathway;
@@ -40,6 +40,11 @@ public class ModelPathwayGenerator implements ILayoutBuilder{
 	}
 	
 	public ModelPathwayGenerator(Map<String, ReactionCI> pathway, ILayout layout){
+		this(pathway, layout, hubDefinition);
+
+	}
+	
+	public ModelPathwayGenerator(Map<String, ReactionCI> pathway, ILayout layout, int hubNumber){
 		if(layout == null){
 			nodes = new HashMap<String, INodeLay>();
 			reactions = new HashMap<String, IReactionLay>();
@@ -49,6 +54,7 @@ public class ModelPathwayGenerator implements ILayoutBuilder{
 		}
 		
 		cofactors = new HashSet<String>();
+		hubDefinition = hubNumber;
 		hubMetabolites = findHubMtabolites(pathway, layout);
 		
 		this.pathway = pathway;
