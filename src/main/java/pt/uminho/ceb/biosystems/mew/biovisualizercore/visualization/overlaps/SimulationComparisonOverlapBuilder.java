@@ -159,7 +159,7 @@ public class SimulationComparisonOverlapBuilder {
 			for(Pair<String,Double> pair : list1){
 
 				shapes.put(pair.getA(), MetabolicOverlapConversionFactory.getShape(pair));
-				overlapObject.addReactionSize(pair.getA(), new Pair<Double, Double>(5.0, 5.0));
+				overlapObject.addReactionSize(pair.getA(), new Pair<Double, Double>(1.0, 1.0));
 			}
 		}
 
@@ -169,7 +169,7 @@ public class SimulationComparisonOverlapBuilder {
 				
 				if(shapes.containsKey(pair.getA())) shapes.put(pair.getA(), MetabolicOverlapConversionFactory.SHAPE_QUESTION);
 				else shapes.put(pair.getA(), MetabolicOverlapConversionFactory.getShape(pair));
-				overlapObject.addReactionSize(pair.getA(), new Pair<Double, Double>(5.0, 5.0));
+				overlapObject.addReactionSize(pair.getA(), new Pair<Double, Double>(1.0, 1.0));
 			}
 		}
 		

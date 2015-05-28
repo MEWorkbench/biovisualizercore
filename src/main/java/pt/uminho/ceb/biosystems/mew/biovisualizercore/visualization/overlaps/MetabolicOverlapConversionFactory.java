@@ -197,6 +197,7 @@ public class MetabolicOverlapConversionFactory {
 				for(String nodeId : kosShapes.keySet()){
 					overlapObject.addReactionShape(nodeId, kosShapes.get(nodeId));
 					overlapObject.addReactionColor(nodeId,new Pair<Integer, Integer>(kosColors.get(nodeId),kosColors.get(nodeId)));
+					overlapObject.addReactionSize(nodeId, new Pair<Double, Double>(1d, 1d));
 					
 //					overlapObject.addReactionSize(nodeId, new Pair<Double, Double>((maxThickness-minThickness)/2, (maxThickness-minThickness)/2));
 				}
