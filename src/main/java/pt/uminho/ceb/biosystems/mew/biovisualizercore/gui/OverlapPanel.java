@@ -13,6 +13,7 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.swing.BorderFactory;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -499,9 +500,7 @@ public class OverlapPanel implements ActionListener, LoadOverlapListener {
 	 */
 	public void addOverLap(String type, IOverlapObject simOverlap) {
 		
-		//		overObjectMap.get(currentOverlapType).put(simOverlap.getName(), simOverlap);
-		
-		if (this.overObjectMap.get(type) == null) {
+		if (!this.overObjectMap.containsKey(type)) {
 			Map<String, IOverlapObject> overlaps = new HashMap<String, IOverlapObject>();
 			overlaps.put(simOverlap.getName(), simOverlap);
 			this.overObjectMap.put(type, overlaps);
@@ -545,17 +544,22 @@ public class OverlapPanel implements ActionListener, LoadOverlapListener {
 	 */
 	public void removeOverlap(String type, String name) {
 		
-		if (getTypeOverlap().equals(type) && getOverlap().equals(name)) {
-			
-			typeOfOverlapCombo.setSelectedIndex(0);
-			overCombo.setSelectedIndex(0);
-			resetOverlap();
+		if(overObjectMap.containsKey(type) && overObjectMap.get(type).containsKey(name)){
+			overObjectMap.get(type).remove(name);
+			if(overObjectMap.get(type).size() == 0){
+				overObjectMap.remove(type);
+				typeOfOverlapCombo.setSelectedIndex(0);
+				((DefaultComboBoxModel<String>)typeOfOverlapCombo.getModel()).removeElement(type);
+			}else{
+				Set<String> overlapsByType = overObjectMap.get(type).keySet();
+				overCombo.removeAllItems();
+				overCombo.addItem("---");
+				for (String item : overlapsByType) {
+					overCombo.addItem(item);
+				}
+			}
 		}
 		
-		if (overObjectMap.get(type) != null) {
-			overObjectMap.get(type).remove(name);
-			if (overObjectMap.get(type).size() == 0) overObjectMap.remove(name);
-		}
 	}
 	
 	public JPanel getDefaultFiltersPanel() {
@@ -568,5 +572,22 @@ public class OverlapPanel implements ActionListener, LoadOverlapListener {
 	
 	public void setVisibleInfoFilter(boolean b) {
 		this.infoCheck.setVisible(b);
+	}
+	
+	public void updateComboBoxes(String itemName, String itemPreviousName, String itemType){
+		
+		if(overObjectMap.containsKey(itemType) && overObjectMap.get(itemType).containsKey(itemPreviousName)){
+			// Update overObjectMap
+			overObjectMap.get(itemType).put(itemName, overObjectMap.get(itemType).get(itemPreviousName));
+			overObjectMap.get(itemType).remove(itemPreviousName);
+			
+			// Update combobox
+			if(typeOfOverlapCombo.getSelectedItem().equals(itemType)){
+				((DefaultComboBoxModel<String>)overCombo.getModel()).addElement(itemName);
+				if(overCombo.getSelectedItem().equals(itemPreviousName))
+					overCombo.setSelectedItem(itemName);
+				((DefaultComboBoxModel<String>)overCombo.getModel()).removeElement(itemPreviousName);
+			}
+		}
 	}
 }
