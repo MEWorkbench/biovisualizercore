@@ -3,7 +3,7 @@ package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.simula
 import java.text.DecimalFormat;
 
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.IMethodLabelFactory;
-import pt.uminho.ceb.biosystems.mew.mewcore.simulation.components.FluxValueMap;
+import pt.uminho.ceb.biosystems.mew.core.simulation.components.FluxValueMap;
 import pt.uminho.ceb.biosystems.mew.utilities.java.StringUtils;
 
 public class ScientificValueLabel implements IMethodLabelFactory<FluxValueMap>{

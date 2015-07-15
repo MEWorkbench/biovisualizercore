@@ -5,9 +5,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import pt.uminho.ceb.biosystems.mew.mewcore.simulation.components.FluxValueMap;
-import pt.uminho.ceb.biosystems.mew.mewcore.simulation.components.GeneticConditions;
-import pt.uminho.ceb.biosystems.mew.mewcore.simulation.components.SteadyStateSimulationResult;
+import pt.uminho.ceb.biosystems.mew.core.simulation.components.FluxValueMap;
+import pt.uminho.ceb.biosystems.mew.core.simulation.components.GeneticConditions;
+import pt.uminho.ceb.biosystems.mew.core.simulation.components.SteadyStateSimulationResult;
 import pt.uminho.ceb.biosystems.mew.utilities.datastructures.collection.CollectionUtils;
 
 public class SimulationComparison {

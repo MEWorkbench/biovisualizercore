@@ -3,7 +3,7 @@ package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.simula
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.IFactoryLabel;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.simulation.method.RoundedValueLabel;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.simulation.method.ScientificValueLabel;
-import pt.uminho.ceb.biosystems.mew.mewcore.simulation.components.FluxValueMap;
+import pt.uminho.ceb.biosystems.mew.core.simulation.components.FluxValueMap;
 
 public class FluxValueLabelFactory extends IFactoryLabel<FluxValueMap>{
 	
