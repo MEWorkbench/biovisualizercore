@@ -108,6 +108,10 @@
   
   <repositories>
 	  <repository>
+		<id>biosystems-snapshots</id>
+		<url>http://193.137.11.210/nexus/content/repositories/biosystems-snapshots</url>
+	  </repository>
+	  <repository>
 	    <id>hgthirdparty</id>
 	    <url>http://193.137.11.210/nexus/content/repositories/hgthirdparty</url>
 	  </repository>
