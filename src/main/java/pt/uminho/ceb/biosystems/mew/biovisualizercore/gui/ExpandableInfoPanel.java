@@ -24,8 +24,8 @@ public class ExpandableInfoPanel extends ExpandablePanel{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	static Icon showIcon = new ImageIcon(ExpandablePanel.class.getClassLoader().getResource("biovisualizer/images/closed.png"));
-	static Icon hideIcon = new ImageIcon(ExpandablePanel.class.getClassLoader().getResource("biovisualizer/images/open.png"));
+	static Icon showIcon = new ImageIcon(ExpandablePanel.class.getClassLoader().getResource("images/closed.png"));
+	static Icon hideIcon = new ImageIcon(ExpandablePanel.class.getClassLoader().getResource("images/open.png"));
 
 	public ExpandableInfoPanel(OverlapPanel filtersPanel, AbstractInformationPanel information){
 		super();

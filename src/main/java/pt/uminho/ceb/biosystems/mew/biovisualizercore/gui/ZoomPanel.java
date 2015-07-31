@@ -42,20 +42,20 @@ public class ZoomPanel extends javax.swing.JPanel {
 			thisLayout.columnWidths = new int[] {7, 7, 7};
 			this.setLayout(thisLayout);
 			{
-				ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("biovisualizer/images/zoom_in_w45.png"));
+				ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("images/zoom_in_w45.png"));
 				addButtoon = new JButton(icon);
 				this.add(addButtoon, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 				
 			}
 			{
-				ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("biovisualizer/images/zoom_out_w45.png"));
+				ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("images/zoom_out_w45.png"));
 				subButton = new JButton(icon);
 				this.add(subButton, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 				
 				
 			}
 			{
-				ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("biovisualizer/images/zoom_fit_w45.png"));
+				ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("images/zoom_fit_w45.png"));
 				fit2ScreenButton = new JButton(icon);
 				this.add(fit2ScreenButton, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0, GridBagConstraints.CENTER, GridBagConstraints.BOTH, new Insets(0, 0, 0, 0), 0, 0));
 				
