@@ -155,7 +155,7 @@ class KeggLabel extends JPanel implements ComponentListener {
 		setOpaque(true);
 		setBackground(Color.WHITE);
 		_iconLabel = new ScaledImageLabel();
-		_iconLabel.setIcon(new ImageIcon(getClass().getClassLoader().getResource("biovisualizer/images/spinning.gif")));
+		_iconLabel.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/spinning.gif")));
 		add(_iconLabel, BorderLayout.CENTER);
 		_textArea = new JEditorPane();
 		_textArea.setContentType("text/html");

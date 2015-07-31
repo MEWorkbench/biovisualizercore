@@ -240,7 +240,7 @@ public class MetaboliteInfoWithPathPanel extends JPanel implements TableModelLis
 //			table_1.getModel().removeTableModelListener(this);
 //			
 //			this.table_1.setModel(tm2);
-//			ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("biovisualizer/images/layout.png"));
+//			ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("images/layout.png"));
 //			JTableUtils.setCellRender(table_1, 1, new ButtonRenderer(icon));
 //			JTableUtils.setCellEditor(table_1, 1, new ButtonEditor(icon));
 //			JTableUtils.setColumnWidth(table_1, 1, 30);

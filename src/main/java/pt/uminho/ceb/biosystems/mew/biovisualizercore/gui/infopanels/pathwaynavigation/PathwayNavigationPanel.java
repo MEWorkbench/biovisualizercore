@@ -86,7 +86,7 @@ public class PathwayNavigationPanel extends JPanel implements MetaboliteListener
 		_pathwayTable.getModel().removeTableModelListener(_tableListener);
 		
 		_pathwayTable.setModel(tm2);
-		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("biovisualizer/images/layout.png"));
+		ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("images/layout.png"));
 		JTableUtils.setCellRender(_pathwayTable, 1, new ButtonRenderer(icon));
 		JTableUtils.setCellEditor(_pathwayTable, 1, new ButtonEditor(icon));
 		JTableUtils.setColumnWidth(_pathwayTable, 1, 30);

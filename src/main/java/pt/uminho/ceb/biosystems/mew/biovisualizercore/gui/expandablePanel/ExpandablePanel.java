@@ -252,8 +252,8 @@ public class ExpandablePanel extends javax.swing.JPanel implements ActionListene
 	*/
 	public static void main(String[] args) {
 		
-		Icon showIcon = new ImageIcon(ExpandablePanel.class.getClassLoader().getResource("biovisualizer/images/closed.png"));
-		Icon hideIcon = new ImageIcon(ExpandablePanel.class.getClassLoader().getResource("biovisualizer/images/open.png"));
+		Icon showIcon = new ImageIcon(ExpandablePanel.class.getClassLoader().getResource("images/closed.png"));
+		Icon hideIcon = new ImageIcon(ExpandablePanel.class.getClassLoader().getResource("images/open.png"));
 		
 		ExpandablePanel exp = new ExpandablePanel();
 		exp.setIcons(showIcon, hideIcon);
