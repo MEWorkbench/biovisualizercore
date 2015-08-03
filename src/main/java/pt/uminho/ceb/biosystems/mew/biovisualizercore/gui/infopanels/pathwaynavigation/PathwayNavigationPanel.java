@@ -41,6 +41,7 @@ public class PathwayNavigationPanel extends JPanel implements MetaboliteListener
 		
 		add(_pathwayTableScroll, BorderLayout.CENTER);
 		_pathwayTableScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_NEVER);
+		_pathwayTableScroll.setPreferredSize(getMinimumSize());
 		
 	}
 	
