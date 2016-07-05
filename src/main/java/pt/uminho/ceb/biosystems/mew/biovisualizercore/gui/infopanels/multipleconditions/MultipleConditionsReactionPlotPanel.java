@@ -1,4 +1,4 @@
-package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui;
+package pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.infopanels.multipleconditions;
 
 import java.awt.BorderLayout;
 import java.awt.event.ComponentEvent;
@@ -15,9 +15,10 @@ import com.xeiam.xchart.ChartBuilder;
 import com.xeiam.xchart.StyleManager.ChartTheme;
 import com.xeiam.xchart.StyleManager.ChartType;
 
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.infopanels.multipleconditions.ChartPanel;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.ReactionListener;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.OverlapEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.OverlapsListener;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.overlaps.components.ReactionEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.IOverlapObject;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.MultipleConditionsOverlap;
 import pt.uminho.ceb.biosystems.mew.utilities.datastructures.collection.CollectionUtils;
@@ -138,6 +139,7 @@ public class MultipleConditionsReactionPlotPanel extends JPanel implements React
 			_reactionIDs = newIds;
 			clearPlot();
 			buildDataPlot();
+			System.out.println("NEW IDS: "+_reactionIDs.toString());
 		} else if (newIds == null || newIds.isEmpty()) {
 			if (_debug) System.out.println("[reactionChanged]: New IDs are null or empty");
 			_reactionIDs = null;
