@@ -77,5 +77,6 @@ public class InformationWithPathwaysPanelGT extends AbstractInformationPanel {
 	@Override
 	public void selectedOverlapChanged(OverlapEvent event) {
 		metPanel.selectedOverlapChanged(event);
+		reactPanel.selectedOverlapChanged(event);
 	}
 }

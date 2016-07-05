@@ -12,6 +12,7 @@ import javax.swing.JTable;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.overlaps.components.ReactionEvent;
 import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.JTableUtils;
 import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.celleditor.ButtonEditor;
 import pt.uminho.ceb.biosystems.mew.guiutilities.gui.table.cellrender.ButtonRenderer;

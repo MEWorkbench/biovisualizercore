@@ -16,9 +16,12 @@ import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.Container;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.infopanels.multipleconditions.MultipleConditionsReactionPlotPanel;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.ChangePathwayEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.OverlapEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.OverlapsListener;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.overlaps.components.GeneConversionPanel;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.overlaps.components.ReactionEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.IReactionLay;
 
 public class ReactionInfoWithPathPanel extends JPanel implements TableModelListener, IReactionInfo, OverlapsListener {
@@ -128,6 +131,11 @@ public class ReactionInfoWithPathPanel extends JPanel implements TableModelListe
 		addOverlapsListener(plotPanel);
 		addReactionListener(plotPanel);
 		tabbedPane.addComponent("Data", plotPanel);
+		
+		GeneConversionPanel genePanel = new GeneConversionPanel(container);
+		addOverlapsListener(genePanel);
+		addReactionListener(genePanel);
+		tabbedPane.addComponent("Genes", genePanel);
 		
 		tabbedPane.populateTabs();
 		add(tabbedPane, BorderLayout.CENTER);

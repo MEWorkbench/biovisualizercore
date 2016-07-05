@@ -228,6 +228,10 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		this.overlapsPanel.addOverLap(type, overlap);
 	}
 	
+	public void addOverlap(String type, IOverlapObject overlap) {
+		this.overlapsPanel.addOverLap(type, overlap);
+	}
+	
 	protected void initGUI() {
 		try {
 			GridBagLayout thisLayout = new GridBagLayout();
