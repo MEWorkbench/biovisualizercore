@@ -23,8 +23,6 @@ public abstract class AbstractOverlapShapeAssigner<F extends Integer> implements
 		Map<String, Integer> shapes = new HashMap<String, Integer>();
 		Map<String, Double> normalizedMap = normalize(infoToAssign);
 		
-		System.out.println(normalizedMap.keySet().getClass());
-		
 		for (String key : normalizedMap.keySet()) {
 			Pair<String, Double> pair = new Pair(key, infoToAssign.get(key));
 			shapes.put(key, getShape(pair.getB()));
