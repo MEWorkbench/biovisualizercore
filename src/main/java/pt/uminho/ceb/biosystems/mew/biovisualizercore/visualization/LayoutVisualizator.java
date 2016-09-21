@@ -69,6 +69,7 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.Consta
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.LayoutUtils;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.OptVisualExtensions;
 import pt.uminho.ceb.biosystems.mew.utilities.datastructures.collection.CollectionUtils;
+import pt.uminho.ceb.biosystems.mew.utilities.datastructures.map.MapUtils;
 import pt.uminho.ceb.biosystems.mew.utilities.datastructures.pair.Pair;
 
 /**
@@ -2281,8 +2282,10 @@ private void removeRubberBand() {
 			}
 		}
 		
+		synchronized (vis) {
 		for(Node n : nodeReactions.values())
 			removeReaction(n);
+		}
 	}
 
 
