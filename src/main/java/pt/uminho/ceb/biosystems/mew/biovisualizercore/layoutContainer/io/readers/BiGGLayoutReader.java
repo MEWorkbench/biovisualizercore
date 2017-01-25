@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -24,25 +25,30 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.utils.exceptions.InvalidLa
 
 public class BiGGLayoutReader implements ILayoutBuilder{
 
+	private Double factor = 2.0;
 	private Map<String, INodeLay> nodes;
 	private Map<String, IReactionLay> reactions;
-	
+
 	private Map<String, String[]> groupToLabelAndReversibility;
-	
-	public BiGGLayoutReader(String file) throws InvalidLayoutFileException{
-		
+
+	public BiGGLayoutReader(String file) throws FileNotFoundException, InvalidLayoutFileException{
+		this(new FileReader(file));
+	}
+
+	public BiGGLayoutReader(Reader file) throws InvalidLayoutFileException{
+
 		nodes = new HashMap<String, INodeLay>();
 		reactions = new HashMap<String, IReactionLay>();
-		
+
 		readFile(file);
 	}
-	
 
-	private void readFile(String file) throws InvalidLayoutFileException {
+
+	private void readFile(Reader file) throws InvalidLayoutFileException {
 
 		BufferedReader reader = null;
 		try {
-			reader = new BufferedReader(new FileReader(file));
+			reader = new BufferedReader(file);
 			String line;
 
 			String section = null;
@@ -125,14 +131,18 @@ public class BiGGLayoutReader implements ILayoutBuilder{
 
 
 	private boolean checkValidity(String[] info) {
-		
+
 		for(String s : info) if (s == null) {
 			return false;
 		}
-		
+
 		return true;
 	}
 
+
+	private Double getCoordinateValue(String value){
+		return Double.valueOf(value)/factor;
+	}
 
 	private void generateLayout(Map<String, String[]> molecules,
 			Map<String, String[]> reactionNodes, List<String[]> connections) {
@@ -140,76 +150,76 @@ public class BiGGLayoutReader implements ILayoutBuilder{
 
 		//For Molecules
 		for(String mol_node_id : molecules.keySet()){
-			
+
 			String label = molecules.get(mol_node_id)[0];
 			Set<String> metIds = new HashSet<String>();
 			metIds.add(label);
-			
+
 			NodeTypeLay nodeType = NodeTypeLay.METABOLITE;
 			if(molecules.get(mol_node_id)[1].equalsIgnoreCase("N")) nodeType = NodeTypeLay.CURRENCY;
-			
-			Double x = Double.valueOf(molecules.get(mol_node_id)[2]);
-			Double y = Double.valueOf(molecules.get(mol_node_id)[3]);
-			
+
+			Double x = getCoordinateValue(molecules.get(mol_node_id)[2]);
+			Double y = getCoordinateValue(molecules.get(mol_node_id)[3]);
+
 			NodeLay node = new NodeLay(mol_node_id, label, metIds, nodeType, x, y);
 			nodes.put(mol_node_id, node);
 		}
-		
+
 		//Group Reactions!
 		Map<String, Set<String>> reactionGroups = groupReactions(reactionNodes, connections, molecules.keySet());
-		
-//		System.out.println("\n\n\nGROUPS!");
+
+		//		System.out.println("\n\n\nGROUPS!");
 		for(String g : reactionGroups.keySet()){
-			
-//			System.out.println(g + " label: " + groupToLabelAndReversibility.get(g)[0] + "->" + "\t" + reactionGroups.get(g));
+
+			//			System.out.println(g + " label: " + groupToLabelAndReversibility.get(g)[0] + "->" + "\t" + reactionGroups.get(g));
 		}
-		
-//		System.out.println("\n\n\n");
-		
+
+		//		System.out.println("\n\n\n");
+
 		//Build the reaction nodes
 		for(String s : reactionGroups.keySet()){
-			
+
 			String uniqueId = s;
 			String label = groupToLabelAndReversibility.get(uniqueId)[0];
-			
+
 			boolean reversible = false;
-			
+
 			if(groupToLabelAndReversibility.get(uniqueId)[1].equalsIgnoreCase("Reversible"))
 				reversible = true;
-			
+
 			Set<String> nodes = reactionGroups.get(s);
-			
+
 			Double x = 0.0;
 			Double y = 0.0;
-			
+
 			for(String rnId : nodes){
-				
-				x += Double.valueOf(reactionNodes.get(rnId)[0]);
-				y += Double.valueOf(reactionNodes.get(rnId)[1]);
+
+				x += getCoordinateValue(reactionNodes.get(rnId)[0]);
+				y += getCoordinateValue(reactionNodes.get(rnId)[1]);
 			}
-			
+
 			x = x / nodes.size();
 			y = y / nodes.size();
-			
+
 			Set<String> metIds = new HashSet<String>();
 			metIds.add(label);
-			
+
 			ReactionLay reaction = new ReactionLay(new HashMap<String, INodeLay>(),new HashMap<String, INodeLay>(), new HashMap<String, INodeLay>(), reversible, x, y, metIds, uniqueId, label);
 			reactions.put(uniqueId, reaction);
 		}
-		
+
 		//link the nodes
 		for(String[] connection : connections){
-			
+
 			if(molecules.keySet().contains(connection[2])){
-				
+
 				//molecule is source
 				String reactionId = groupsHaveReaction(reactionGroups, connection[3]);
 				INodeLay node = nodes.get(connection[2]);
 				reactions.get(reactionId).getReactants().put(node.getUniqueId(), node);
 			}
 			else if(molecules.keySet().contains(connection[3])){
-				
+
 				//molecule is target
 				String reactionId = groupsHaveReaction(reactionGroups, connection[2]);
 				INodeLay node = nodes.get(connection[3]);
@@ -225,37 +235,37 @@ public class BiGGLayoutReader implements ILayoutBuilder{
 
 		groupToLabelAndReversibility = new HashMap<String, String[]>();
 		Map<String, Set<String>> groupReactions = new HashMap<String, Set<String>>();
-		
+
 		for(String[] connection : connections){
-			
+
 			//Reaction reaction
 			if(!molecules.contains(connection[2]) && !molecules.contains(connection[3])){
-				
+
 				String group1 = groupsHaveReaction(groupReactions, connection[2]);
 				String group2 = groupsHaveReaction(groupReactions, connection[3]);
 				if(!group1.equals("") && !group2.equals("")){
-					
+
 					//merge groups
 					String new_group = UUID.randomUUID().toString();
-					
+
 					Set<String> str_group1 = groupReactions.get(group1);
 					Set<String> str_group2 = groupReactions.get(group2);
-					
+
 					Set<String> newSet = new HashSet<String>();
 					newSet.addAll(str_group1);
 					newSet.addAll(str_group2);
-					
+
 					String[] labelAndRev = this.groupToLabelAndReversibility.get(group1);
-					
+
 					groupReactions.remove(group1);
 					groupReactions.remove(group2);
 					groupReactions.put(new_group, newSet);
-					
+
 					groupToLabelAndReversibility.remove(group1);
 					groupToLabelAndReversibility.remove(group2);
 					groupToLabelAndReversibility.put(new_group, labelAndRev);
-					
-					
+
+
 				}
 				else if(!group1.equals("") && group2.equals("")){
 					groupReactions.get(group1).add(connection[3]);
@@ -270,13 +280,13 @@ public class BiGGLayoutReader implements ILayoutBuilder{
 					rIds.add(connection[3]);
 					groupReactions.put(new_group, rIds);
 					String[] labelAndRev = new String[2];
-				
+
 					labelAndRev[0] = connection[0];
 					labelAndRev[1] = connection[1];
 					groupToLabelAndReversibility.put(new_group, labelAndRev);
 				}
 			}
-			
+
 			//molecule reaction
 			else if(molecules.contains(connection[2]) && !molecules.contains(connection[3])){
 				String group;
@@ -291,7 +301,7 @@ public class BiGGLayoutReader implements ILayoutBuilder{
 					groupToLabelAndReversibility.put(group, labelAndRev);
 				}
 			}
-			
+
 			//reaction molecule
 			else if(!molecules.contains(connection[2]) && molecules.contains(connection[3])){
 				String group;
@@ -307,7 +317,7 @@ public class BiGGLayoutReader implements ILayoutBuilder{
 				}
 			}
 		}
-		
+
 		return groupReactions;
 	}
 
@@ -318,7 +328,7 @@ public class BiGGLayoutReader implements ILayoutBuilder{
 		for(String group : groupReactions.keySet()){
 			if(groupReactions.get(group).contains(string)) return group;
 		}
-		
+
 		return "";
 	}
 
@@ -327,6 +337,6 @@ public class BiGGLayoutReader implements ILayoutBuilder{
 	public LayoutContainer buildLayout(){
 		LayoutContainer lc = new LayoutContainer(nodes, reactions);
 		return lc;
-		}
+	}
 
 }
