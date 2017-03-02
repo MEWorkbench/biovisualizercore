@@ -31,7 +31,7 @@ public class BiGGLayoutReader implements ILayoutBuilder{
 
 	private Map<String, String[]> groupToLabelAndReversibility;
 
-	public BiGGLayoutReader(String file) throws FileNotFoundException, InvalidLayoutFileException{
+	public BiGGLayoutReader(String file) throws InvalidLayoutFileException, FileNotFoundException{
 		this(new FileReader(file));
 	}
 
@@ -121,8 +121,7 @@ public class BiGGLayoutReader implements ILayoutBuilder{
 			reader.close();
 
 			generateLayout(molecules, reactionNodes, connections);
-		} catch (FileNotFoundException e) {
-			throw new InvalidLayoutFileException("Invalid file!" + "\n" + e.getMessage());
+		
 		} catch (IOException e) {
 			throw new InvalidLayoutFileException("Invalid file!" + "\n" + e.getMessage());
 		}
