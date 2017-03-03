@@ -101,4 +101,30 @@ public class BioVisualizerUtils {
 		p.setLocation(x, y);
 		return p;
 	}
+	
+	public static Point getMinPoint(ILayout lay) {
+		
+		double x = Double.MAX_VALUE;
+		double y = Double.MAX_VALUE;
+		
+		for(INodeLay node : lay.getNodes().values()){
+			Double nx = node.getX();
+			if(nx != null && nx < x) x = nx;
+			
+			Double ny = node.getY();
+			if(ny != null && ny < y) y = ny;
+			
+		}
+		
+		if(x == Double.MAX_VALUE) x=0;
+		if(y == Double.MAX_VALUE) y=0;
+		
+		Point p = new Point();
+		p.setLocation(x, y);
+		return p;
+	}
+
+	public static Point getPutInInitialPoint(Point pMin) {
+		return new Point((int)(0-pMin.getX()), (int)(0-pMin.getY()));
+	}
 }

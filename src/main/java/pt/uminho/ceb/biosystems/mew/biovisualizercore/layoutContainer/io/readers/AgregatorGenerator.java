@@ -1,6 +1,7 @@
 package pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.io.readers;
 
 import java.awt.Point;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -14,15 +15,21 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.INodeLay;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.IReactionLay;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.utils.BioVisualizerUtils;
+import pt.uminho.ceb.biosystems.mew.utilities.math.MathUtils;
 
 public class AgregatorGenerator implements ILayoutBuilder{
 
-	
+	private int insert = 50;
 	
 	private Map<String, INodeLay> nodes;
 	private Map<String, IReactionLay> reactions;
 	private ILayout[] layouts;
 
+	
+	public AgregatorGenerator(Collection<? extends ILayout> layouts){
+		this(layouts.toArray(new ILayout[layouts.size()]));
+	}
+	
 	public AgregatorGenerator(ILayout... layouts) {
 		this.layouts = layouts;
 	}
@@ -50,14 +57,20 @@ public class AgregatorGenerator implements ILayoutBuilder{
 		double x = 0;
 		double y = 0;
 		for(ILayout lay : layouts){
-//			System.out.println("PVPVPVPVPVPVPVVP>>>>>>> OLE::"+ lay);
 			if(lay!=null){
-				Point p = BioVisualizerUtils.getMaxPoint(lay);
+				Point pMax = BioVisualizerUtils.getMaxPoint(lay);
+				Point pMin = BioVisualizerUtils.getMinPoint(lay);
 				
-				Map<String, String> metToLink = createOrAgregateMetabolite(x, y, lay.getNodes(), nodeslink);
-				createOrAgregateReactions(x, y, lay.getReactions(), metToLink, reactionsLink);
-				x+= p.getX();
-				y+= p.getY();
+				Point slide = BioVisualizerUtils.getPutInInitialPoint(pMin);
+				
+				
+				Map<String, String> metToLink = createOrAgregateMetabolite(x+slide.getX(), y+slide.getY(), lay.getNodes(), nodeslink);
+				createOrAgregateReactions(x+slide.getX(), y+slide.getY(), lay.getReactions(), metToLink, reactionsLink);
+				
+				
+				Point p = new Point((int)Math.abs(pMax.getX() - pMin.getX()), (int)Math.abs(pMax.getY() - pMin.getY()));
+				x+= p.getX() + insert;
+				y+= p.getY() + insert;
 			}
 		}
 		
@@ -86,7 +99,6 @@ public class AgregatorGenerator implements ILayoutBuilder{
 		Map<String, INodeLay> newMap = new HashMap<String, INodeLay>();
 		for(INodeLay node : nodes.values()){
 			String id = dic.get(node.getUniqueId());
-			System.out.println(id + "\t" + node + "\t" + this.nodes.get(id));
 			newMap.put(id, this.nodes.get(id));
 		}
 		return newMap;
