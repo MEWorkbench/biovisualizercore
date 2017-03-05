@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -48,6 +49,7 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.INodeLay;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.IReactionLay;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.NodeClickingListener;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.io.writers.EscherLayoutWriter;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.io.writers.SBGNWriter;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.io.writers.XGMMLWriter;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.utils.filefilter.FileTypeFilter;
@@ -290,10 +292,12 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 						JFileChooser fc = new JFileChooser(last_visited_directory);
 						fc.setAcceptAllFileFilterUsed(false);
 						FileFilter xgmmlFilter = new FileTypeFilter(".xgmml", "XGMML Files");
+						FileFilter escherFilter = new FileTypeFilter(".json", "Escher json Map");
 						FileFilter svgFilter = new FileTypeFilter(".svg", "SVG Map");
 						FileFilter pdfFiler = new FileTypeFilter(".pdf", "PDF document");
 						FileFilter sbgn = new FileTypeFilter(".sbgn", "SBGN Map (Beta)");
 						
+						fc.addChoosableFileFilter(escherFilter);
 						fc.addChoosableFileFilter(sbgn);
 						fc.addChoosableFileFilter(pdfFiler);
 						fc.addChoosableFileFilter(svgFilter);
@@ -315,6 +319,8 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 								ext = ".svg";
 							else if (desc.equals("PDF document (*.pdf)"))
 								ext = ".pdf";
+							else if (desc.equals("Escher json Map (*.json)"))
+								ext = ".json";
 							else
 								ext = ".sbgn";
 							
@@ -353,6 +359,8 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 			exportToSVG(file, scale);
 		} else if (ext.equals(".pdf"))
 			exportToPDF(file, scale);
+		else if(ext.equals(".json"))
+			exportToEscher(file, scale);
 		else
 			exportToSBGN(file);
 	}
@@ -474,6 +482,25 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		});
 		
 		t.start();
+		
+	}
+	
+	private void exportToEscher(String filedir, Double scale){
+		try {
+			FileOutputStream out = new FileOutputStream(filedir);
+			BufferedOutputStream bout = new BufferedOutputStream(out);
+			
+			EscherLayoutWriter writer = new EscherLayoutWriter(out);
+			writer.write(getNewLayout());
+			bout.flush();
+			bout.close();
+			out.close();
+			JOptionPane.showMessageDialog(this, "Layout exported!");
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(this, "Failed to export layout. " + e.getMessage());
+			e.printStackTrace();
+		}
+		
 		
 	}
 	

@@ -1,0 +1,153 @@
+[
+  {
+    "map_name": "e_coli_core.Core metabolism",
+    "map_id": "0df3827fde8464e80f455a773a52c274",
+    "map_description": "E. coli core metabolic network\nLast Modified Fri Dec 05 2014 16:39:44 GMT-0800 (PST)",
+    "homepage": "https:\/\/escher.github.io",
+    "schema": "https:\/\/escher.github.io\/escher\/jsonschema\/1-0-0#"
+  },
+  {
+    "reactions": {
+      "1577514": {
+        "name": "Formate transport in via proton symport",
+        "bigg_id": "FORt2",
+        "segments": {
+          "11": {
+            "to_node_id": "1577044",
+            "from_node_id": "1576666",
+            "b2": null,
+            "b1": null
+          },
+          "10": {
+            "to_node_id": "1577046",
+            "from_node_id": "1577045",
+            "b2": null,
+            "b1": null
+          },
+          "13": {
+            "to_node_id": "1576590",
+            "from_node_id": "1577046",
+            "b2": null,
+            "b1": null
+          },
+          "12": {
+            "to_node_id": "1577044",
+            "from_node_id": "1576833",
+            "b2": null,
+            "b1": null
+          },
+          "14": {
+            "to_node_id": "1576811",
+            "from_node_id": "1577046",
+            "b2": null,
+            "b1": null
+          },
+          "9": {
+            "to_node_id": "1577045",
+            "from_node_id": "1577044",
+            "b2": null,
+            "b1": null
+          }
+        },
+        "genes": [
+          {
+            "bigg_id": "b2492",
+            "name": "focB"
+          },
+          {
+            "bigg_id": "b0904",
+            "name": "focA"
+          }
+        ],
+        "reversibility": false,
+        "metabolites": [
+          {
+            "coefficient": -1,
+            "bigg_id": "for_e"
+          },
+          {
+            "coefficient": 1,
+            "bigg_id": "h_c"
+          },
+          {
+            "coefficient": 1,
+            "bigg_id": "for_c"
+          },
+          {
+            "coefficient": -1,
+            "bigg_id": "h_e"
+          }
+        ],
+        "label_x": 1255.7530517578,
+        "label_y": 4574.1323242188,
+        "gene_reaction_rule": "b0904 or b2492"
+      }
+    },
+    "nodes": {
+     "1576811": {
+        "node_is_primary": false,
+        "name": "H+",
+        "label_x": 1245.2397460938,
+        "node_type": "metabolite",
+        "y": 4440,
+        "x": 1270,
+        "bigg_id": "h_c",
+        "label_y": 4424.1323242188
+      },
+          "1576833": {
+        "node_is_primary": false,
+        "name": "H+",
+        "label_x": 1228.8927001953,
+        "node_type": "metabolite",
+        "y": 4770,
+        "x": 1270,
+        "bigg_id": "h_e",
+        "label_y": 4750.9584960938
+      },
+          "1576590": {
+        "node_is_primary": true,
+        "name": "Formate",
+        "label_x": 1495.2307128906,
+        "node_type": "metabolite",
+        "y": 4095,
+        "x": 1460,
+        "bigg_id": "for_c",
+        "label_y": 4083.958984375
+      },
+    "1576666": {
+        "node_is_primary": true,
+        "name": "Formate",
+        "label_x": 1500,
+        "node_type": "metabolite",
+        "y": 4843.322265625,
+        "x": 1460,
+        "bigg_id": "for_e",
+        "label_y": 4843.322265625
+      },
+    "1577044": {
+        "y": 4730,
+        "x": 1360,
+        "node_type": "multimarker"
+      },
+       "1577046": {
+        "y": 4470,
+        "x": 1360,
+        "node_type": "multimarker"
+      },
+      "1577045": {
+        "y": 4600,
+        "x": 1360,
+        "node_type": "midmarker"
+      }
+    },
+    "canvas": {
+      "y": 314.36893920898,
+      "x": 7.8570625305176,
+      "height": 4860.4570373535,
+      "width": 5894.5156913757
+    },
+    "text_labels": {
+      
+    }
+  }
+]
