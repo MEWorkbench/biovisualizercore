@@ -664,5 +664,7 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		throw new RuntimeException("Chama o liu!!!");
 	}
 	
-	
+	public OverlapPanel getOverlapsPanel() {
+		return overlapsPanel;
+	}
 }
