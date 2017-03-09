@@ -10,7 +10,7 @@ public class FluxValueLabelFactory extends IFactoryLabel<FluxValueMap>{
 	public FluxValueLabelFactory() {
 		super();
 		addLabelMethod("Scientific Value", new ScientificValueLabel());
-		addLabelMethod("Rounded Value", new RoundedValueLabel());
+//		addLabelMethod("Rounded Value", new RoundedValueLabel());
 	}
 	
 }

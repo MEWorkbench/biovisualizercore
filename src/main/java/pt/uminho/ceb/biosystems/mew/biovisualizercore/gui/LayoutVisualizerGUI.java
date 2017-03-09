@@ -400,9 +400,9 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 					GraphicsLib.expand(bounds, 50 + (int) (1 / display.getScale()));
 					DisplayLib.fitViewToBounds(display, bounds, 0);
 					
-					System.out.println("antes");
+//					System.out.println("antes");
 					display.paintDisplay(g, new Dimension(display.getWidth(), display.getHeight()));
-					System.out.println("end");
+//					System.out.println("end");
 					
 					// Save this SVG into a file (required by SVG -> PDF transformation process)
 					File svgFile = File.createTempFile("graphic-", ".svg");

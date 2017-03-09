@@ -201,6 +201,11 @@ public class AbstractOverlap implements IOverlapObject, Serializable {
 		this.reactionShapes.put(nodeId, shape);
 	}
 	
+	public void addReactionThickness(String nodeId, Double thickness){
+		this.edgeThickness.put(nodeId, thickness);
+	}
+	
+	
 	@Override
 	public Map<String, Integer> getReactionShapes() {
 		return reactionShapes;

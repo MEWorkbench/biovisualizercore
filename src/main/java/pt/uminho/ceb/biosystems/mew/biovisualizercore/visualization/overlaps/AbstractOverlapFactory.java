@@ -102,16 +102,16 @@ public abstract class AbstractOverlapFactory {
 		
 		AbstractOverlap newOverlap = new AbstractOverlap(overlap.getName());
 		
-		//REACTION LABELS!
-		if (overlap.getNewReactionLabels() == null || overlap.getNewReactionLabels().size() == 0) {
-			
-			Map<String, String> newLabels = getNewReactionLabels(lc, overlap.getEdgeThickness(), reacMappings);
-			newOverlap.setReactionLabels(newLabels);
-		} else {
-			
+//		//REACTION LABELS!
+//		if (overlap.getNewReactionLabels() == null || overlap.getNewReactionLabels().size() == 0) {
+//			
+//			Map<String, String> newLabels = getNewReactionLabels(lc, overlap.getEdgeThickness(), reacMappings);
+//			newOverlap.setReactionLabels(newLabels);
+//		} else {
+//			
 			Map<String, String> newLabels = getNewReactionLabels3(lc, overlap.getNewReactionLabels(), reacMappings);
 			newOverlap.setReactionLabels(newLabels);
-		}
+//		}
 		
 		Map<String, Double> newThickness = getConvertedThickness(overlap.getEdgeThickness(), lc, reacMappings);
 		newOverlap.setEdgeThickness(newThickness);

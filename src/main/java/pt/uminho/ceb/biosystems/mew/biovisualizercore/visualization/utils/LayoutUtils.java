@@ -27,6 +27,7 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.INodeLay;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.IReactionLay;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.NodeTypeLay;
+import pt.uminho.ceb.biosystems.mew.core.simulation.mfa.utils.MathUtils;
 import pt.uminho.ceb.biosystems.mew.utilities.datastructures.collection.CollectionUtils;
 
 public class LayoutUtils {
@@ -355,7 +356,7 @@ public class LayoutUtils {
 	 */
 	public static Map<String, Double> normalizeFluxes(Map<String, Double> values, double minBound, double maxBound, double zeroThikness){
 		
-		Map<String, Double> absValues = new HashMap<String, Double>(), normalized_values = new HashMap<String, Double>();
+		Map<String, Double> absValues = new HashMap<String, Double>();
 		double minValue = 0, maxValue = Double.MIN_VALUE;
 		
 		Map<String, Double> value2 = removeZeros(values);
@@ -385,16 +386,25 @@ public class LayoutUtils {
 
 		//		minValue = 0;
 
-		double normalized;
 
-		for(String s : values.keySet()){
-			if(!outliers.contains(s)){
+		return normalize(absValues, minBound, maxBound, zeroThikness, minValue, maxValue);
+	}
+	
+	
+	
+	public static Map<String, Double> normalize(Map<String, Double> absValues, Double minBound, Double maxBound, Double zeroThikness, Double minValue, Double maxValue){
+		
+		Map<String, Double> normalized_values = new HashMap<String, Double>();
+
+		
+		for(String s : absValues.keySet()){
+//			if(!outliers.contains(s)){
 				if(absValues.get(s) != 0.0){
-					normalized = (absValues.get(s) - minValue) / (maxValue - minValue) * (maxBound - minBound) + minBound;
+					Double normalized = (absValues.get(s) - minValue) / (maxValue - minValue) * (maxBound - minBound) + minBound;
 					normalized_values.put(s, normalized);
 				}else
 					normalized_values.put(s, zeroThikness);
-			}
+//			}
 		}
 		
 		return normalized_values;

@@ -913,7 +913,7 @@ public class LayoutVisualizator {
 					result.put(id, new Double[]{layoutContainer.getReactions().get(id).getX(), layoutContainer.getReactions().get(id).getY()});
 				}
 				else if(!item.getString(LayoutUtils.ID).equals(LayoutUtils.DUMMY)){
-					System.out.println(id + "\t" + layoutContainer.getNodes().get(id));
+//					System.out.println(id + "\t" + layoutContainer.getNodes().get(id));
 					result.put(id, new Double[]{layoutContainer.getNodes().get(id).getX(), layoutContainer.getNodes().get(id).getY()});
 				}
 			}
