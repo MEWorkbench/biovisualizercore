@@ -31,7 +31,9 @@ public class BioVisualizerConvEdgeRenderer extends AbstractShapeRenderer{
 	public static final String EDGE_LINEAR_DRAW_TYPE = "EDGE_LINEAR_DRAW_TYPE";
 
 	public static final String EDGE_TYPE = "edgeType";
-	public static String EDGE_DRAW_TYPE = EDGE_LINEAR_DRAW_TYPE;
+	
+	public static final String MY_EDGE_TYPE = "MY_EDGE_TYPE";
+	public static String EDGE_DRAW_TYPE = EDGE_DEFAULT_DRAW_TYPE;
 
 
 	protected static final double HALF_PI = Math.PI / 2;
@@ -324,7 +326,9 @@ public class BioVisualizerConvEdgeRenderer extends AbstractShapeRenderer{
 	protected void getCurveControlPoints(EdgeItem eitem, Point2D[] cp, 
 			double x1, double y1, double x2, double y2) 
 	{
-		switch (EDGE_DRAW_TYPE) {
+		
+		String ole = eitem.getSourceNode().getString(MY_EDGE_TYPE);
+		switch (ole) {
 		case EDGE_EXTENDED_BEZIER_DRAW_TYPE:
 			extendedType(eitem, cp, x1, y1, x2, y2);
 			break;

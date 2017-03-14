@@ -256,6 +256,7 @@ public class LayoutVisualizator {
 		met_graph.addColumn(LayoutUtils.THICKNESS, double.class);
 		
 		met_graph.addColumn(LayoutUtils.IS_REACTANT, boolean.class);
+		met_graph.addColumn(BioVisualizerConvEdgeRenderer.MY_EDGE_TYPE, String.class);
 		
 		/**
 		 *  For all reactions
@@ -273,6 +274,7 @@ public class LayoutVisualizator {
 			r1.setDouble(OptVisualExtensions.VISUAL_HEIGHT,  LayoutUtils.reactionNodeSize);
 			r1.setDouble(OptVisualExtensions.VISUAL_WIDTH, LayoutUtils.reactionNodeSize);
 			
+			r1.setString(BioVisualizerConvEdgeRenderer.MY_EDGE_TYPE, BioVisualizerConvEdgeRenderer.EDGE_DRAW_TYPE);
 			
 			
 			if(reactions.get(rId).getX()!=null && reactions.get(rId)!=null){
@@ -1811,6 +1813,17 @@ public class LayoutVisualizator {
 		synchronized (vis) {
 			Node node = (Node) visualItem.getSourceTuple();
 			changeTypeToCurrency(node);
+			
+		}
+		
+	}
+	
+	
+	public void changeEdgeType(Node node, String type) {
+		
+		synchronized (vis) {
+			
+			node.set(BioVisualizerConvEdgeRenderer.MY_EDGE_TYPE, type);
 			
 		}
 		
