@@ -17,20 +17,24 @@ import pt.uminho.ceb.biosystems.mew.biocomponents.validation.io.JSBMLValidationE
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.StandaloneVisualization;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.io.readers.BiGGLayoutReader;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.utils.exceptions.InvalidLayoutFileException;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.renderers.BioVisualizerConvEdgeRenderer;
 
-public class EcoliCore {
+public class EcoliCoreTest {
 	
 	
-	public static void main(String[] args) throws Exception {
+	public static void main(String... args) throws Exception {
 		
 		
-		JSBMLReader reader = new JSBMLReader(EcoliCore.class.getClassLoader().getResourceAsStream("models/ecoli_core_model.xml"), "1",false);
+		JSBMLReader reader = new JSBMLReader(EcoliCoreTest.class.getClassLoader().getResourceAsStream("models/ecoli_core_model.xml"), "1",false);
 		
 		Container cont = new Container(reader);
 		Set<String> met = cont.identifyMetabolitesIdByPattern(Pattern.compile(".*_b"));
 		
-		BiGGLayoutReader layreder = new BiGGLayoutReader(new InputStreamReader(EcoliCore.class.getClassLoader().getResourceAsStream("BiGG1/ecoli_core_model_layout.txt")));
+		BiGGLayoutReader layreder = new BiGGLayoutReader(new InputStreamReader(EcoliCoreTest.class.getClassLoader().getResourceAsStream("BiGG1/ecoli_core_model_layout.txt")));
 		
+		if(args.length>0) BioVisualizerConvEdgeRenderer.EDGE_DRAW_TYPE = args[0];
+		
+
 		StandaloneVisualization ole = new StandaloneVisualization(cont);
 		ole.addLayout("Ecoli", layreder.buildLayout());
 		

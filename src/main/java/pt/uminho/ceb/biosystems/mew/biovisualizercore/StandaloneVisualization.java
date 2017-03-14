@@ -13,6 +13,7 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.InformationWithPathway
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.LayoutVisualizerGUI;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.LayoutContainer;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.ILayout;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.IReactionLay;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.utils.BioVisualizerUtils;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.IOverlapObject;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.IdMappingOverlapFactory;
@@ -55,6 +56,10 @@ public class StandaloneVisualization{
 		gui.changeLayout(name);
 //		gui.updateInfo();
 //		gui.updateUI();
+	}
+	
+	public void addReaction(IReactionLay reaction){
+		gui.addReaction(reaction);
 	}
 	
 }
