@@ -328,6 +328,9 @@ public class BioVisualizerConvEdgeRenderer extends AbstractShapeRenderer{
 	{
 		
 		String ole = eitem.getSourceNode().getString(MY_EDGE_TYPE);
+		if(ole == null){ 
+			ole = EDGE_DRAW_TYPE;
+		}
 		switch (ole) {
 		case EDGE_EXTENDED_BEZIER_DRAW_TYPE:
 			extendedType(eitem, cp, x1, y1, x2, y2);
