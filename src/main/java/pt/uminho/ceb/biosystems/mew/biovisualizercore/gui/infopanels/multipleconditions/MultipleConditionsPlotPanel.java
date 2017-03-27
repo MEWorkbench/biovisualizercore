@@ -117,10 +117,15 @@ public class MultipleConditionsPlotPanel extends JPanel implements MetaboliteLis
 					ArrayList<Number> val = new ArrayList<Number>();
 					for (String cond : conditions.keySet()) {
 						IOverlapObject condOverlap = conditions.get(cond);
-						Double v = condOverlap.getNodesOriginalValues().get(metID);
-						if (v != null) {
-							conds.add(cond);
-							val.add(v);
+						
+						// Prevent null pointer exception that occur if overlap 
+						// Does not contain information for that metabolite id
+						if(condOverlap.getNodesOriginalValues() != null){
+							Double v = condOverlap.getNodesOriginalValues().get(metID);
+							if (v != null) {
+								conds.add(cond);
+								val.add(v);
+							}
 						}
 					}
 					if(!conds.isEmpty() && !val.isEmpty())
