@@ -40,7 +40,7 @@ public class GeneToReactionConversion {
 			for (Map.Entry<String, ReactionCI> e : _container.getReactions().entrySet()) {
 				
 				if (e.getValue().getGeneRule() != null && !e.getValue().getGeneRuleString().isEmpty()) {
-					double value = geneRulesConversion.convertGeneRule(e.getValue().getGeneRule().getRootNode()).evaluate(environment).getNumericValue();
+					double value = (double) geneRulesConversion.convertGeneRule(e.getValue().getGeneRule().getRootNode()).evaluate(environment).getValue();
 					
 					if(!Double.isNaN(value) && !Double.isInfinite(value)){
 						reacValues.put(e.getKey(), value);

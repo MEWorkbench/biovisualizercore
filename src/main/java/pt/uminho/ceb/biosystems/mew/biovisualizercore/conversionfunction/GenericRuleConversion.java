@@ -50,7 +50,7 @@ public class GenericRuleConversion extends AbstractGeneRulesConversion {
 	@Override
 	protected AbstractSyntaxTreeNode<DataTypeEnum, IValue> convertVariable(AbstractSyntaxTreeNode<DataTypeEnum, IValue> geneRule) {
 		String geneID = ((Variable) geneRule).toString();
-		double geneExpressionValue = environment.find(geneID).getNumericValue();
+		double geneExpressionValue = (double) environment.find(geneID).getValue();
 		geneRegulationRule = new VariableDouble(geneID, geneExpressionValue);
 		return geneRegulationRule;
 	}

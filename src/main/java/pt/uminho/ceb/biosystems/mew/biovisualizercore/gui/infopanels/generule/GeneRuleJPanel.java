@@ -162,7 +162,7 @@ class NodeUserObject {
 	}
 	
 	public double evaluateNode() {
-		return conversion.convertGeneRule(node).evaluate(environment).getNumericValue();
+		return (double) conversion.convertGeneRule(node).evaluate(environment).getValue();
 	}
 	
 	public String toString() {
