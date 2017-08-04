@@ -4,7 +4,7 @@
 
 	<groupId>pt.uminho.ceb.biosystems.mew</groupId>
 	<artifactId>mew-biovisualizer-core</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>biovisualizercore</name>
@@ -14,6 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
+		<meworkbench.version>1.0.1-SNAPSHOT</meworkbench.version>
 	</properties>
 
 	<dependencies>
@@ -27,12 +28,12 @@
 		<dependency>
 			<groupId>pt.uminho.ceb.biosystems.mew</groupId>
 			<artifactId>mew-core</artifactId>
-			<version>0.0.3-SNAPSHOT</version>
+			<version>${meworkbench.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>pt.uminho.ceb.biosystems.mew</groupId>
 			<artifactId>mew-guiutilities</artifactId>
-			<version>0.0.2-SNAPSHOT</version>
+			<version>${meworkbench.version}</version>
 		</dependency>
 
 		<dependency>
