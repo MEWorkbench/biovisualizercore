@@ -30,6 +30,7 @@
 			<artifactId>mew-core</artifactId>
 			<version>${meworkbench.version}</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>pt.uminho.ceb.biosystems.mew</groupId>
 			<artifactId>mew-guiutilities</artifactId>
