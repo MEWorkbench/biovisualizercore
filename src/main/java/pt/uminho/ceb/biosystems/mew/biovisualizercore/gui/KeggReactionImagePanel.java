@@ -26,7 +26,7 @@ import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.Container;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.overlaps.components.ReactionEvent;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.ReactionEvent;
 import pt.uminho.ceb.biosystems.mew.utilities.graphics.GraphicsUtils;
 
 public class KeggReactionImagePanel extends JPanel implements ComponentListener, ReactionListener {

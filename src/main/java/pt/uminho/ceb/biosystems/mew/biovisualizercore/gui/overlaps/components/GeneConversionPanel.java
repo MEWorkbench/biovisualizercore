@@ -36,6 +36,7 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.ReactionListener;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.infopanels.generule.GeneRuleJPanel;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.OverlapEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.OverlapsListener;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.ReactionEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.IOverlapObject;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.constants.ConversionFunction;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.omics.OmicsMultipleConditionsOverlap;

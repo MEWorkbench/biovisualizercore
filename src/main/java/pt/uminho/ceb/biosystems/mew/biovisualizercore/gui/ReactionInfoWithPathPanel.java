@@ -20,8 +20,8 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.infopanels.multiplecon
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.ChangePathwayEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.OverlapEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.OverlapsListener;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.ReactionEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.overlaps.components.GeneConversionPanel;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.overlaps.components.ReactionEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.IReactionLay;
 
 public class ReactionInfoWithPathPanel extends JPanel implements TableModelListener, IReactionInfo, OverlapsListener {
@@ -141,8 +141,8 @@ public class ReactionInfoWithPathPanel extends JPanel implements TableModelListe
 		add(tabbedPane, BorderLayout.CENTER);
 	}
 	
-	public void fireReactionEvent() {
-		ReactionEvent event = new ReactionEvent(this, reactionIds);
+	public void fireReactionEvent(String uuid, Set<String> reactionIds, String label) {
+		ReactionEvent event = new ReactionEvent(this,uuid, reactionIds,label, container);
 		for (ReactionListener listener : reactionListeners)
 			listener.reactionChanged(event);
 	}
@@ -184,6 +184,16 @@ public class ReactionInfoWithPathPanel extends JPanel implements TableModelListe
 	public void putReactionInfo(IReactionLay nodeLay) {
 		reactionIds = nodeLay.getIDs();
 		layoutLabelText.setText(nodeLay.getLabel());
-		fireReactionEvent();
+		fireReactionEvent(nodeLay.getUniqueId(), reactionIds, nodeLay.getLabel());
+	}
+	
+	
+	public List<ReactionListener> getReactionListeners() {
+		return reactionListeners;
+	}
+
+	public void removeReactionListener(ReactionListener listener) {
+		reactionListeners.remove(listener);
+		
 	}
 }

@@ -79,4 +79,12 @@ public class InformationWithPathwaysPanelGT extends AbstractInformationPanel {
 		metPanel.selectedOverlapChanged(event);
 		reactPanel.selectedOverlapChanged(event);
 	}
+	
+	public  MetaboliteInfoWithPathPanel2 getMetabolitesInformationPanel() {
+		return metPanel;
+	}
+	
+	public ReactionInfoWithPathPanel getReactionsInformationPanel() {
+		return reactPanel;
+	}
 }

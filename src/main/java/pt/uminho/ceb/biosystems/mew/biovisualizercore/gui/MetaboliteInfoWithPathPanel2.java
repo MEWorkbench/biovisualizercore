@@ -137,8 +137,8 @@ public class MetaboliteInfoWithPathPanel2 extends JPanel implements TableModelLi
 		add(tabbedPane, BorderLayout.CENTER);
 	}
 	
-	public void fireMetaboliteEvent() {
-		MetaboliteEvent event = new MetaboliteEvent(this, metaboliteIds);
+	public void fireMetaboliteEvent(String uuid, Set<String> mids, String label) {
+		MetaboliteEvent event = new MetaboliteEvent(this,uuid, metaboliteIds, label, container);
 		for (MetaboliteListener listener : metaboliteListeners)
 			listener.metaboliteChanged(event);
 	}
@@ -181,6 +181,12 @@ public class MetaboliteInfoWithPathPanel2 extends JPanel implements TableModelLi
 	public void putMetaboliteInfo(INodeLay nodeLay) {
 		metaboliteIds = nodeLay.getIds();
 		layoutLabelText.setText(nodeLay.getLabel());
-		fireMetaboliteEvent();
+		fireMetaboliteEvent(nodeLay.getUniqueId(), metaboliteIds, nodeLay.getLabel());
+	}
+
+	public void removeMetaboliteListener(MetaboliteListener listener) {
+		if(metaboliteListeners!=null)
+		metaboliteListeners.remove(listener);
+		
 	}
 }

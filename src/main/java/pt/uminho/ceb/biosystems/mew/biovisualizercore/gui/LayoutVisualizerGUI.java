@@ -542,7 +542,7 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		
 	}
 	
-	private ILayout getNewLayout() {
+	public ILayout getNewLayout() {
 		return LayoutUtils.cleanInconsistencies(lVis.getNewLayoutWithCoords());
 	}
 	
