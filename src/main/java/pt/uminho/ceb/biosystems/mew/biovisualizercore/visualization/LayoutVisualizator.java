@@ -1024,7 +1024,7 @@ public class LayoutVisualizator {
 	public void removeReaction(Node reactionNode){
 		
 		
-//		synchronized (vis) {
+		synchronized (vis) {
 			
 		stopActions();
 		
@@ -1071,7 +1071,7 @@ public class LayoutVisualizator {
 		
 		
 		runActions();
-//		}
+		}
 	}
 	
 
@@ -2282,10 +2282,8 @@ private void removeRubberBand() {
 			}
 		}
 		
-		synchronized (vis) {
 		for(Node n : nodeReactions.values())
 			removeReaction(n);
-		}
 	}
 
 

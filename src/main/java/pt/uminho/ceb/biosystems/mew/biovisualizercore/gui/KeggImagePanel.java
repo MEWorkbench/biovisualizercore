@@ -22,7 +22,7 @@ import pt.uminho.ceb.biosystems.mew.biocomponents.container.Container;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.infopanels.kegg.KeggInfoProvider;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.MetaboliteEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.MetaboliteListener;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.overlaps.components.ReactionEvent;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.ReactionEvent;
 
 public class KeggImagePanel extends JPanel implements MetaboliteListener, ReactionListener {
 	

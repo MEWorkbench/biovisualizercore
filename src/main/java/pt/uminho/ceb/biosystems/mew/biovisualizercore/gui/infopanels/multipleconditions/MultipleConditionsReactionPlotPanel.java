@@ -18,7 +18,7 @@ import com.xeiam.xchart.StyleManager.ChartType;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.ReactionListener;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.OverlapEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.OverlapsListener;
-import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.overlaps.components.ReactionEvent;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.ReactionEvent;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.IOverlapObject;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.overlaps.MultipleConditionsOverlap;
 import pt.uminho.ceb.biosystems.mew.utilities.datastructures.collection.CollectionUtils;
