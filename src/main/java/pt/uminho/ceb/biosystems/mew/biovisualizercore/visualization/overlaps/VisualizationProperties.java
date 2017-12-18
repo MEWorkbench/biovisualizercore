@@ -104,7 +104,7 @@ public class VisualizationProperties {
 			String metLabel = metId;
 			try {
 				metLabel = metLabelConstructor.getLabel(container, metId);
-				System.out.println(metId + "\t" + metLabel + "\t" + container);
+//				System.out.println(metId + "\t" + metLabel + "\t" + container);
 				metaboliteLabels.put(metId, metLabel);
 			} catch (Exception e) {
 //				e.printStackTrace();
@@ -141,11 +141,11 @@ public class VisualizationProperties {
 			} catch (Exception e) {e.printStackTrace();}
 			
 		}
-		System.out.println("Updating....");
+//		System.out.println("Updating....");
 		System.out.println("Reactions: " + reactionLabels);
-		System.out.println("Metabolites: " + metaboliteLabels);
-		System.out.println("Currency: " + currencyLabels);
-		System.out.println("Information: " + informationLabels);
+//		System.out.println("Metabolites: " + metaboliteLabels);
+//		System.out.println("Currency: " + currencyLabels);
+//		System.out.println("Information: " + informationLabels);
 	}
 	
 	/**
