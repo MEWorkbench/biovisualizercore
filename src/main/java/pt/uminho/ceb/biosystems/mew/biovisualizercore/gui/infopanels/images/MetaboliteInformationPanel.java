@@ -55,7 +55,7 @@ public class MetaboliteInformationPanel extends JPanel implements MetaboliteList
 	public void metaboliteChanged(MetaboliteEvent event) {
 		populateTable(event);
 		HashSet<String> s = new HashSet<String>();
-		s.add("test");
+		s.addAll(event.getIds());
 		imagaPanel.populateImages(s);
 	}
 
