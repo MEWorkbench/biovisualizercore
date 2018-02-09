@@ -351,7 +351,7 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 	/**
 	 * Exportation of the layout to xgmml.
 	 */
-	private void exportLayoutToDir(String ext, String file, double scale) {
+	public void exportLayoutToDir(String ext, String file, double scale) {
 		
 		if (ext.equals(".xgmml")) {
 			exportToXGMML(file);
@@ -365,7 +365,7 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 			exportToSBGN(file);
 	}
 	
-	private void exportToSBGN(String file) {
+	public void exportToSBGN(String file) {
 		
 		try {
 			SBGNWriter.writeSBGNtoFile(file, getNewLayout());
@@ -380,7 +380,7 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		
 	}
 	
-	private void exportToPDF(final String pdffile, final double scale) {
+	public void exportToPDF(final String pdffile, final double scale) {
 		
 		final LayoutVisualizerGUI currentPanel = this;
 		Thread t = new Thread(new Runnable() {
@@ -435,7 +435,7 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		t.start();
 	}
 	
-	private void exportToSVG(final String svgpath, final double scale) {
+	public void exportToSVG(final String svgpath, final double scale) {
 		
 		final LayoutVisualizerGUI currentPanel = this;
 		Thread t = new Thread(new Runnable() {
@@ -485,7 +485,7 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		
 	}
 	
-	private void exportToEscher(String filedir, Double scale){
+	public void exportToEscher(String filedir, Double scale){
 		try {
 			FileOutputStream out = new FileOutputStream(filedir);
 			BufferedOutputStream bout = new BufferedOutputStream(out);
@@ -504,7 +504,7 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		
 	}
 	
-	private void exportToXGMML(String filedir) {
+	public void exportToXGMML(String filedir) {
 		
 		File file = new File(filedir);
 		
