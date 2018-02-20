@@ -11,6 +11,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.LayoutContainer;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.io.writers.EscherLayoutWriter;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.io.writers.VisJSExporter;
 
 public class EscherLayoutReaderTest {
 
@@ -29,6 +30,9 @@ public class EscherLayoutReaderTest {
 
 		EscherLayoutWriter w1 = new EscherLayoutWriter(new FileOutputStream("ole2.json"));
 		w1.write(cont);
+		
+		
+		
 	}
 	
 	@Test
@@ -39,11 +43,14 @@ public class EscherLayoutReaderTest {
 		LayoutContainer cont = r.buildLayout();
 
 
-		EscherLayoutWriter w = new EscherLayoutWriter(new BufferedOutputStream(System.out));
-		w.write(cont);
-
-
-		EscherLayoutWriter w1 = new EscherLayoutWriter(new FileOutputStream("ole.json"));
-		w1.write(cont);
+//		EscherLayoutWriter w = new EscherLayoutWriter(new BufferedOutputStream(System.out));
+//		w.write(cont);
+//
+//
+//		EscherLayoutWriter w1 = new EscherLayoutWriter(new FileOutputStream("ole.json"));
+//		w1.write(cont);
+		
+		VisJSExporter export = new VisJSExporter();
+		export.export(cont);
 	}
 }

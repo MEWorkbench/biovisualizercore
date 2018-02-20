@@ -44,8 +44,13 @@ public abstract class AbstractOverlapFactory {
 		vp.setInformationLabels(createLabelsMap(infoMappings, vp.getInformationLabels(), lc));
 		
 		for (String id : reacMappings.keySet()) {
+			String original = lc.getReactions().get(id).getLabel();
 			String label = vp.getReactionLabels().get(id);
-			if (label != null) lc.getReactions().get(id).setLabel(label);
+			if (label != null){
+				label = label.replaceAll("\\$\\$\\$\\$\\$\\$", original);
+//				lc.getReactions().get(id).setLabel(label);
+				vp.getReactionLabels().put(id, label);
+			}
 		}
 		
 		for (String id : nodeMappings.keySet()) {

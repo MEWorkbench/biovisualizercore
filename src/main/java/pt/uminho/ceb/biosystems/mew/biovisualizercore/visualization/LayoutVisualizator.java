@@ -23,6 +23,7 @@ import prefuse.action.ActionList;
 import prefuse.action.RepaintAction;
 import prefuse.action.layout.graph.ForceDirectedLayout;
 import prefuse.activity.Activity;
+import prefuse.activity.ActivityManager;
 import prefuse.controls.Control;
 import prefuse.controls.FocusControl;
 import prefuse.controls.PanControl;
@@ -2147,8 +2148,8 @@ public class LayoutVisualizator {
 		
 //		ActivityManager.stopThread();
 		
-		fixAllNodes();
 		synchronized (vis) {			
+			fixAllNodes();
 			colorShapeManager.stopDecorators();
 			
 			removeRubberBand();
@@ -2173,7 +2174,8 @@ public class LayoutVisualizator {
 //			vis.removeGroup("graph");
 //			
 
-		}		
+		}
+//		ActivityManager.run();
 		
 	}
 
