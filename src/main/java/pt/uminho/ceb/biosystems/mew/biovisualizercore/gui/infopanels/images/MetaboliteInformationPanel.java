@@ -60,9 +60,6 @@ public class MetaboliteInformationPanel extends JPanel implements MetaboliteList
 		
 		s.add(event.getContainer().getMetabolitesExtraInfo().get("IMAGE_FILE").get(event.getUuid()));
 		
-//		MapUtils.prettyPrint(event.getContainer().getMetabolitesExtraInfo().get("IMAGE_FILE"));
-		System.out.println(event.getUuid());
-		System.out.println(s);
 		imagaPanel.populateImages(s);
 	}
 
@@ -76,13 +73,9 @@ public class MetaboliteInformationPanel extends JPanel implements MetaboliteList
 		
 		String idToMore = event.getUuid();
 		MetaboliteCI mci = event.getContainer().getMetabolite(event.getUuid());
-		System.out.println(mci);
-		System.out.println(mci.getId());
-	
 		dataModel.addRow(new Object[]{"Name", mci.getName()});
 		dataModel.addRow(new Object[]{"Formula", mci.getFormula()});
 		
-		System.out.println(event.getContainer().getMetabolites().keySet());
 		Map<String, Map<String, String>> info = event.getContainer().getMetabolitesExtraInfo();
 		for(String id : info.keySet()){
 			
@@ -93,7 +86,6 @@ public class MetaboliteInformationPanel extends JPanel implements MetaboliteList
 				e.printStackTrace();
 			}
 			
-			System.out.println(id+"\t"+value+ "\t" + idToMore);
 			if(value !=null)
 				dataModel.addRow(new Object[]{id, value});
 		}
