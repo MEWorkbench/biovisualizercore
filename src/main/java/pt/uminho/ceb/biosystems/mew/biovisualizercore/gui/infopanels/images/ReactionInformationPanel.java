@@ -4,12 +4,14 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.util.Map;
+import java.util.TreeSet;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
 import javax.swing.JTable;
+import javax.swing.event.TreeSelectionEvent;
 import javax.swing.table.DefaultTableModel;
 
 import pt.uminho.ceb.biosystems.mew.biocomponents.container.components.ReactionCI;
@@ -73,7 +75,9 @@ public class ReactionInformationPanel extends JPanel implements ReactionListener
 //		dataModel.addRow(new Object[]{"Formula", mci.getFormula()});
 		
 		Map<String, Map<String, String>> info = event.getContainer().getReactionsExtraInfo();
-		for(String id : info.keySet()){
+		TreeSet<String> order = new TreeSet<>(info.keySet());
+		
+		for(String id : order){
 			
 			Object value = null;
 			try {
