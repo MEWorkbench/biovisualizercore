@@ -72,7 +72,7 @@ public class ReactionInformationPanel extends JPanel implements ReactionListener
 		dataModel.addRow(new Object[]{"Name", mci.getName()});
 //		dataModel.addRow(new Object[]{"Formula", mci.getFormula()});
 		
-		Map<String, Map<String, String>> info = event.getContainer().getMetabolitesExtraInfo();
+		Map<String, Map<String, String>> info = event.getContainer().getReactionsExtraInfo();
 		for(String id : info.keySet()){
 			
 			Object value = null;
