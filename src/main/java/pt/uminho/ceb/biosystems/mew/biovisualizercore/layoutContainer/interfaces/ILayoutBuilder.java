@@ -11,5 +11,5 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.LayoutCont
  */
 public interface ILayoutBuilder {
 
-	public LayoutContainer buildLayout();
+	public LayoutContainer buildLayout() throws Exception;
 }

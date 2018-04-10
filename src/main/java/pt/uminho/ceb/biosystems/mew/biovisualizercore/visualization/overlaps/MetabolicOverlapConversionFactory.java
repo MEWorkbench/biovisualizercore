@@ -6,12 +6,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import prefuse.util.ColorLib;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.options.labels.simulation.method.ScientificValueLabel;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.LayoutUtils;
 import pt.uminho.ceb.biosystems.mew.core.simulation.components.FluxValueMap;
 import pt.uminho.ceb.biosystems.mew.core.simulation.components.GeneticConditions;
 import pt.uminho.ceb.biosystems.mew.core.simulation.components.ReactionChangesList;
 import pt.uminho.ceb.biosystems.mew.core.simulation.components.SteadyStateSimulationResult;
 import pt.uminho.ceb.biosystems.mew.utilities.datastructures.pair.Pair;
+import pt.uminho.ceb.biosystems.mew.utilities.math.MathUtils;
 
 
 public class MetabolicOverlapConversionFactory {
@@ -163,12 +166,130 @@ public class MetabolicOverlapConversionFactory {
 //		return overlapObject;
 //	}
 
+	public static final String MAX_THICKNESS = "MAX_THICKNESS";
+	public static final String MIN_THICKNESS = "MIN_THICKNESS";
+	public static final String ZERO_THICKNESS = "ZERO_THICKNESS";
+	public static final String FVA_COLOR = "FVA_COLOR";
+	
+	
 	public static Integer getShape(Pair<String, Double> pair){
 		if(pair.getB() > 1.0) return SHAPE_ARROW_UP;
 		else if(pair.getB() < 1.0 && pair.getB()>0.0) return SHAPE_ARROW_DOWN;
 		else return SHAPE_FATX;
 	}
 	
+	
+	public static AbstractOverlap convertFVAToOverlap(String name, Map<String, double[]> fva, FluxValueMap simulation, Map<String, Object> info){
+		
+		AbstractOverlap overlap = new AbstractOverlap(name);
+		
+		ScientificValueLabel f = new ScientificValueLabel();
+		
+		
+		Double zeroThikness = (Double)info.get(ZERO_THICKNESS);
+		Double minThickness = (Double)info.get(MIN_THICKNESS);
+		Double maxThickness = (Double)info.get(MAX_THICKNESS);
+		Integer color = (Integer)info.get(FVA_COLOR);
+		Double error = 1e-9;
+		
+//		int color = ColorLib.rgba(127, 63, 191, 255);
+		
+		Map<String, Double> edgeThickness = null;
+		if(simulation!= null)
+			
+			
+			edgeThickness = LayoutUtils.normalizeFluxes(simulation, minThickness, maxThickness, zeroThikness);
+		else
+			edgeThickness = populateSameThickness(fva, (maxThickness+minThickness)/2, zeroThikness, error);
+		
+		
+		Map<String, Double> difValue = diffFVAVakues(fva);
+		
+		Pair<Double, Double> p = MathUtils.minMaxT(difValue.values());
+		Map<String, Double> alpha = LayoutUtils.normalize(difValue, 100.0, 255.0, 100.0, p.getA(), p.getB());
+		
+		Map<String, Boolean> isPositive = new HashMap<>();
+		Set<String> alternative = new HashSet<String>();
+		Set<String> zeroFluxes = new HashSet<>();
+		 
+		
+		for(String id : fva.keySet()){
+			
+			Double min = fva.get(id)[0];
+			Double max = fva.get(id)[1];
+			Double d = max - min;
+			
+			System.out.println(id +"\t" + min + "\t" + max);
+			if(max>0 && min > 0 ) isPositive.put(id, true);
+			else if(max<0 && min < 0) isPositive.put(id, false);
+			
+			
+			if(Math.abs(max) < error && Math.abs(min) < error){
+				System.out.println("zero");
+				zeroFluxes.add(id);
+			}
+			else if(Math.abs(max) < error || Math.abs(min) < error){
+			
+//			if(Math.abs(d) > error){
+				alternative.add(id);
+				Double edThinck = edgeThickness.get(id);
+				if(edThinck< minThickness)edgeThickness.put(id, minThickness);
+				alpha.put(id, 100.0);
+				
+			}
+			
+			if(!zeroFluxes.contains(id)){
+				int newColor = ColorLib.setAlpha(color, alpha.get(id).intValue());
+				overlap.addReactionColor(id, new Pair<Integer, Integer>(newColor, newColor));
+			}
+			
+			String extraInfo = "["+f.getInfo(min)+","+f.getInfo(max)+"]";
+			overlap.getNewReactionLabels().put(id, extraInfo);
+			
+		}
+		
+		System.out.println("Possitive:\t" + isPositive);
+		System.out.println("alpha:\t" + alpha);
+		System.out.println("alternative:\t" + alternative);
+		System.out.println("zeroFluxes:\t" + zeroFluxes);
+		overlap.setEdgeThickness(edgeThickness);
+		overlap.setFluxDirections(isPositive);
+		Map<String, Set<String>> filters = new HashMap<>();
+		filters.put("Zero Values", zeroFluxes);
+		filters.put("Alternatives", alternative);
+		overlap.setVisFilters(filters);
+		
+		
+		return overlap;
+	}
+	
+	private static Map<String, Double> populateSameThickness(Map<String, double[]> fva, Double minThickness,
+			Double zeroThikness, Double error) {
+
+		Map<String, Double> ret = new HashMap<>();
+		for(String id: fva.keySet()){
+			Double min = fva.get(id)[0];
+			Double max = fva.get(id)[0];
+			if(Math.abs(max) < error && Math.abs(min) < error) ret.put(id, zeroThikness);
+			else ret.put(id, minThickness);
+		}
+		
+		return ret;
+	}
+
+
+	private static Map<String, Double> diffFVAVakues(Map<String, double[]> fva) {
+		
+		Map<String, Double> diff = new HashMap<>();
+		for(String id : fva.keySet()){
+			double[] minMax = fva.get(id);
+			diff.put(id, -Math.abs(minMax[1]-minMax[0]));
+		}
+		
+		return diff;
+	}
+
+
 	public static AbstractOverlap convertSimulationToOverlap(SteadyStateSimulationResult simRes, String name, double minThickness, double maxThickness, double zeroThikness){
 
 		AbstractOverlap overlapObject = new AbstractOverlap(name);
@@ -257,6 +378,7 @@ public class MetabolicOverlapConversionFactory {
 			
 			if(pair.getB()>1.0){
 				overlapObject.addReactionShape(pair.getA(), SHAPE_ARROW_UP);
+				
 				overlapObject.addReactionColor(pair.getA(), new Pair<Integer, Integer>(OVER_COLOUR,OVER_COLOUR));
 				overlapObject.addReactionSize(pair.getA(), new Pair<Double, Double>(5.0, 5.0));
 			}

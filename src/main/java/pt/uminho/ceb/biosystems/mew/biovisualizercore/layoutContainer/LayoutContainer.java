@@ -2,6 +2,7 @@ package pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer;
 
 import java.io.Serializable;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -168,6 +169,26 @@ public class LayoutContainer implements ILayout, Serializable{
 		}
 		
 		return hasInfoNodes;
+	}
+	
+	public Set<String> getReactionsModelLinkage(){
+		
+		Set<String> ids = new HashSet<String>();
+		for(IReactionLay r : reactions.values()){
+			ids.addAll(r.getIDs());
+		}
+		return ids;
+		
+	}
+	
+	public Set<String> getMetaboliteModelLinkage(){
+		
+		Set<String> ids = new HashSet<String>();
+		for(INodeLay n : nodes.values()){
+			ids.addAll(n.getIds());
+		}
+		return ids;
+		
 	}
 
 }

@@ -14,10 +14,8 @@ public class ScientificValueLabel implements IMethodLabelFactory<FluxValueMap>{
 		this.precision = precision;
 	}
 	
-	@Override
-	public String getInfo(FluxValueMap map, String attributeId) {
+	public String getInfo(Double v){
 		
-		Double v = map.get(attributeId);
 		String ret = "N/A";
 		if (v!=null && !Double.isNaN(v)){
 //        	if(v==0)
@@ -46,5 +44,13 @@ public class ScientificValueLabel implements IMethodLabelFactory<FluxValueMap>{
 		
 		}
 		return ret;
+	}
+	
+	@Override
+	public String getInfo(FluxValueMap map, String attributeId) {
+		
+		Double v = map.get(attributeId);
+		
+		return getInfo(v);
 	}
 }

@@ -23,6 +23,7 @@ import prefuse.action.ActionList;
 import prefuse.action.RepaintAction;
 import prefuse.action.layout.graph.ForceDirectedLayout;
 import prefuse.activity.Activity;
+import prefuse.activity.ActivityManager;
 import prefuse.controls.Control;
 import prefuse.controls.FocusControl;
 import prefuse.controls.PanControl;
@@ -69,6 +70,7 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.Consta
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.LayoutUtils;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.OptVisualExtensions;
 import pt.uminho.ceb.biosystems.mew.utilities.datastructures.collection.CollectionUtils;
+import pt.uminho.ceb.biosystems.mew.utilities.datastructures.map.MapUtils;
 import pt.uminho.ceb.biosystems.mew.utilities.datastructures.pair.Pair;
 
 /**
@@ -256,6 +258,7 @@ public class LayoutVisualizator {
 		met_graph.addColumn(LayoutUtils.THICKNESS, double.class);
 		
 		met_graph.addColumn(LayoutUtils.IS_REACTANT, boolean.class);
+		met_graph.addColumn(BioVisualizerConvEdgeRenderer.MY_EDGE_TYPE, String.class);
 		
 		/**
 		 *  For all reactions
@@ -273,6 +276,7 @@ public class LayoutVisualizator {
 			r1.setDouble(OptVisualExtensions.VISUAL_HEIGHT,  LayoutUtils.reactionNodeSize);
 			r1.setDouble(OptVisualExtensions.VISUAL_WIDTH, LayoutUtils.reactionNodeSize);
 			
+			r1.setString(BioVisualizerConvEdgeRenderer.MY_EDGE_TYPE, BioVisualizerConvEdgeRenderer.EDGE_DRAW_TYPE);
 			
 			
 			if(reactions.get(rId).getX()!=null && reactions.get(rId)!=null){
@@ -913,7 +917,7 @@ public class LayoutVisualizator {
 					result.put(id, new Double[]{layoutContainer.getReactions().get(id).getX(), layoutContainer.getReactions().get(id).getY()});
 				}
 				else if(!item.getString(LayoutUtils.ID).equals(LayoutUtils.DUMMY)){
-					System.out.println(id + "\t" + layoutContainer.getNodes().get(id));
+//					System.out.println(id + "\t" + layoutContainer.getNodes().get(id));
 					result.put(id, new Double[]{layoutContainer.getNodes().get(id).getX(), layoutContainer.getNodes().get(id).getY()});
 				}
 			}
@@ -1021,7 +1025,7 @@ public class LayoutVisualizator {
 	public void removeReaction(Node reactionNode){
 		
 		
-//		synchronized (vis) {
+		synchronized (vis) {
 			
 		stopActions();
 		
@@ -1068,7 +1072,7 @@ public class LayoutVisualizator {
 		
 		
 		runActions();
-//		}
+		}
 	}
 	
 
@@ -1816,6 +1820,17 @@ public class LayoutVisualizator {
 		
 	}
 	
+	
+	public void changeEdgeType(Node node, String type) {
+		
+		synchronized (vis) {
+			
+			node.set(BioVisualizerConvEdgeRenderer.MY_EDGE_TYPE, type);
+			
+		}
+		
+	}
+	
 	public void changeTypeToCurrency(Node node){
 		String uniqueID = node.getString(LayoutUtils.ID);
 
@@ -2133,8 +2148,8 @@ public class LayoutVisualizator {
 		
 //		ActivityManager.stopThread();
 		
-		fixAllNodes();
 		synchronized (vis) {			
+			fixAllNodes();
 			colorShapeManager.stopDecorators();
 			
 			removeRubberBand();
@@ -2159,7 +2174,8 @@ public class LayoutVisualizator {
 //			vis.removeGroup("graph");
 //			
 
-		}		
+		}
+//		ActivityManager.run();
 		
 	}
 

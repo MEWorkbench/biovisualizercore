@@ -50,6 +50,8 @@ public class MetaboliteInfoWithPathPanel extends JPanel implements TableModelLis
 	private List<MetaboliteListener>	metaboliteListeners	= null;
 	private List<OverlapsListener>		overlapListeners	= null;
 	
+	private MetaboliteExtraInfoTabbedPanel tabbedPane =null;
+	
 	public MetaboliteInfoWithPathPanel(Map<String, Set<String>> pathways) {
 		this(pathways, null);
 	}
@@ -137,6 +139,12 @@ public class MetaboliteInfoWithPathPanel extends JPanel implements TableModelLis
 		add(tabbedPane, tabbedPaneConstraints);
 	}
 	
+	
+//	public void addExtraInformationPanel(MetaboliteListener metaboliteListener){
+//		addMetaboliteListener(keggPanel);
+//	}
+//	
+	
 	/**
 	 * Method that displays the metabolite information.
 	 * 
@@ -147,11 +155,11 @@ public class MetaboliteInfoWithPathPanel extends JPanel implements TableModelLis
 		metabolitesIds = nodeLay.getIds();
 		layoutLabelText.setText(nodeLay.getLabel());
 //		updateInfo();
-		fireMetaboliteEvent();
+		fireMetaboliteEvent(nodeLay.getUniqueId(), metabolitesIds, nodeLay.getLabel());
 	}
 	
-	public void fireMetaboliteEvent() {
-		MetaboliteEvent event = new MetaboliteEvent(this, metabolitesIds);
+	public void fireMetaboliteEvent(String uuid, Set<String> mids, String label) {
+		MetaboliteEvent event = new MetaboliteEvent(this,uuid, mids, label, container);
 		for (MetaboliteListener listener : metaboliteListeners)
 			listener.metaboliteChanged(event);
 	}

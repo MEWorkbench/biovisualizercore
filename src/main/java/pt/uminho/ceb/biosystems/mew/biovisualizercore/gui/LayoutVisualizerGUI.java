@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
+import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -48,6 +49,7 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.INodeLay;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.IReactionLay;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.NodeClickingListener;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.io.writers.EscherLayoutWriter;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.io.writers.SBGNWriter;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.io.writers.XGMMLWriter;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.utils.filefilter.FileTypeFilter;
@@ -228,6 +230,10 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		this.overlapsPanel.addOverLap(type, overlap);
 	}
 	
+	public void addOverlap(String type, IOverlapObject overlap) {
+		this.overlapsPanel.addOverLap(type, overlap);
+	}
+	
 	protected void initGUI() {
 		try {
 			GridBagLayout thisLayout = new GridBagLayout();
@@ -286,10 +292,12 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 						JFileChooser fc = new JFileChooser(last_visited_directory);
 						fc.setAcceptAllFileFilterUsed(false);
 						FileFilter xgmmlFilter = new FileTypeFilter(".xgmml", "XGMML Files");
+						FileFilter escherFilter = new FileTypeFilter(".json", "Escher json Map");
 						FileFilter svgFilter = new FileTypeFilter(".svg", "SVG Map");
 						FileFilter pdfFiler = new FileTypeFilter(".pdf", "PDF document");
 						FileFilter sbgn = new FileTypeFilter(".sbgn", "SBGN Map (Beta)");
 						
+						fc.addChoosableFileFilter(escherFilter);
 						fc.addChoosableFileFilter(sbgn);
 						fc.addChoosableFileFilter(pdfFiler);
 						fc.addChoosableFileFilter(svgFilter);
@@ -311,6 +319,8 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 								ext = ".svg";
 							else if (desc.equals("PDF document (*.pdf)"))
 								ext = ".pdf";
+							else if (desc.equals("Escher json Map (*.json)"))
+								ext = ".json";
 							else
 								ext = ".sbgn";
 							
@@ -341,7 +351,7 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 	/**
 	 * Exportation of the layout to xgmml.
 	 */
-	private void exportLayoutToDir(String ext, String file, double scale) {
+	public void exportLayoutToDir(String ext, String file, double scale) {
 		
 		if (ext.equals(".xgmml")) {
 			exportToXGMML(file);
@@ -349,11 +359,13 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 			exportToSVG(file, scale);
 		} else if (ext.equals(".pdf"))
 			exportToPDF(file, scale);
+		else if(ext.equals(".json"))
+			exportToEscher(file, scale);
 		else
 			exportToSBGN(file);
 	}
 	
-	private void exportToSBGN(String file) {
+	public void exportToSBGN(String file) {
 		
 		try {
 			SBGNWriter.writeSBGNtoFile(file, getNewLayout());
@@ -368,7 +380,7 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		
 	}
 	
-	private void exportToPDF(final String pdffile, final double scale) {
+	public void exportToPDF(final String pdffile, final double scale) {
 		
 		final LayoutVisualizerGUI currentPanel = this;
 		Thread t = new Thread(new Runnable() {
@@ -388,9 +400,9 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 					GraphicsLib.expand(bounds, 50 + (int) (1 / display.getScale()));
 					DisplayLib.fitViewToBounds(display, bounds, 0);
 					
-					System.out.println("antes");
+//					System.out.println("antes");
 					display.paintDisplay(g, new Dimension(display.getWidth(), display.getHeight()));
-					System.out.println("end");
+//					System.out.println("end");
 					
 					// Save this SVG into a file (required by SVG -> PDF transformation process)
 					File svgFile = File.createTempFile("graphic-", ".svg");
@@ -423,7 +435,7 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		t.start();
 	}
 	
-	private void exportToSVG(final String svgpath, final double scale) {
+	public void exportToSVG(final String svgpath, final double scale) {
 		
 		final LayoutVisualizerGUI currentPanel = this;
 		Thread t = new Thread(new Runnable() {
@@ -473,7 +485,26 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		
 	}
 	
-	private void exportToXGMML(String filedir) {
+	public void exportToEscher(String filedir, Double scale){
+		try {
+			FileOutputStream out = new FileOutputStream(filedir);
+			BufferedOutputStream bout = new BufferedOutputStream(out);
+			
+			EscherLayoutWriter writer = new EscherLayoutWriter(out);
+			writer.write(getNewLayout());
+			bout.flush();
+			bout.close();
+			out.close();
+			JOptionPane.showMessageDialog(this, "Layout exported!");
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(this, "Failed to export layout. " + e.getMessage());
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	public void exportToXGMML(String filedir) {
 		
 		File file = new File(filedir);
 		
@@ -511,7 +542,7 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		
 	}
 	
-	private ILayout getNewLayout() {
+	public ILayout getNewLayout() {
 		return LayoutUtils.cleanInconsistencies(lVis.getNewLayoutWithCoords());
 	}
 	
@@ -633,5 +664,7 @@ public class LayoutVisualizerGUI extends javax.swing.JPanel implements ChangeLay
 		throw new RuntimeException("Chama o liu!!!");
 	}
 	
-	
+	public OverlapPanel getOverlapsPanel() {
+		return overlapsPanel;
+	}
 }

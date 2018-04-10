@@ -31,6 +31,7 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.IReactionLay;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces.NodeClickingListener;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.LayoutVisualizator;
+import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.renderers.BioVisualizerConvEdgeRenderer;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.renderers.BioVisualizerEdgeRenderer;
 import pt.uminho.ceb.biosystems.mew.biovisualizercore.visualization.utils.LayoutUtils;
 import pt.uminho.ceb.biosystems.mew.utilities.datastructures.collection.CollectionUtils;
@@ -250,6 +251,10 @@ public class BioVisualizerNodeInfoClickControl extends ControlAdapter{
 			rightClickPopupMenu.add(replicateReactionNodeMenu((Node) visualItem.getSourceTuple()));
 			rightClickPopupMenu.add(new JSeparator());
 			rightClickPopupMenu.add(removeReactionNodeMenu((Node) visualItem.getSourceTuple()));
+			
+			
+//			NOTE: This line is to change edge type layout
+//			rightClickPopupMenu.add(changeEdgeType((Node) visualItem.getSourceTuple()));
 		}
 
 		
@@ -276,6 +281,36 @@ public class BioVisualizerNodeInfoClickControl extends ControlAdapter{
 	}
 	
 	
+
+	private JMenuItem changeEdgeType(final Node sourceTuple) {
+		
+		String original = sourceTuple.getString(BioVisualizerConvEdgeRenderer.MY_EDGE_TYPE);
+		if(original == null || original.equals("")) original = BioVisualizerConvEdgeRenderer.EDGE_DRAW_TYPE;
+		
+		final String toChange = (original.equals(BioVisualizerConvEdgeRenderer.EDGE_LINEAR_DRAW_TYPE)?
+				BioVisualizerConvEdgeRenderer.EDGE_EXTENDED_BEZIER_DRAW_TYPE:BioVisualizerConvEdgeRenderer.EDGE_LINEAR_DRAW_TYPE);
+				
+				
+//				BioVisualizerConvEdgeRenderer.EDGE_DEFAULT_DRAW_TYPE;
+		String info = (original.equals(BioVisualizerConvEdgeRenderer.EDGE_LINEAR_DRAW_TYPE)?
+				"Change to bazier edge":"Change to linear edge");
+				
+		
+		
+		System.out.println("Original " + original);
+		
+		JMenuItem item = new JMenuItem(info);
+		item.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				
+				lViz.changeEdgeType(sourceTuple, toChange);
+			}
+		});
+		
+		return item;
+	}
 
 	private JMenuItem removeReactionNodeMenu(final Node sourceTuple) {
 		
