@@ -172,7 +172,7 @@ public class LayoutVisualizator {
 
 	/**
 	 * Set the {@link Visualization}
-	 * @param visualization
+	 * @param vis visualization
 	 */
 	public void setVis(Visualization vis) {
 		this.vis = vis;
@@ -847,7 +847,6 @@ public class LayoutVisualizator {
 	
 	/**
 	 * Adds a group of invisible reactions to the {@link VisibleElementsManagementAction} 
-	 * @param id - identification for the set of invisible reactions
 	 * @param inv - id's of the reactions to turn invisible
 	 */
 	public void addInvisibleReactions(Set<String> inv){
@@ -930,7 +929,7 @@ public class LayoutVisualizator {
 	/**
 	 * Builds a map with the identifier of all nodes and a boolean corresponding to the visibility of 
 	 * the element in the display.
-	 * @return Map id -> visible
+	 * @return Map id  visible
 	 */
 	public Map<String, Boolean> getVisibilityOfNodes(){
 

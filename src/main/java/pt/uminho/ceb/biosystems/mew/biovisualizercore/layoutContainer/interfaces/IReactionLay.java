@@ -32,14 +32,14 @@ public interface IReactionLay extends Serializable{
 	/**
 	 * map of nodes that are connected as reactants
 	 * to this reaction node.
-	 * @return map node id -> {@link INodeLay}
+	 * @return map node id {@link INodeLay}
 	 */
 	public Map<String, INodeLay> getReactants();	
 	
 	/**
 	 * map of nodes that are connected as products
 	 * to this reaction node.
-	 * @return map node id -> {@link INodeLay}
+	 * @return map node id {@link INodeLay}
 	 */
 	public Map<String, INodeLay> getProducts();
 	
@@ -51,7 +51,7 @@ public interface IReactionLay extends Serializable{
 	
 	/**
 	 * Map of information nodes that connect to this reaction
-	* @return map node id -> {@link INodeLay}
+	* @return map node id {@link INodeLay}
 	 */
 	public Map<String, INodeLay> infos();
 	

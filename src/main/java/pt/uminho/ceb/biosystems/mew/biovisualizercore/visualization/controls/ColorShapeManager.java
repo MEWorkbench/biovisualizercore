@@ -349,7 +349,7 @@ public class ColorShapeManager {
 	 * Runs a thickness edge {@link Action} based on a given.
 	 * flux distribution.
 	 * 
-	 * @param fluxes
+	 * @param sizes
 	 */
 	public void setNewThickness(Map<String, Double> sizes) {
 		setEdgesThickness(sizes);

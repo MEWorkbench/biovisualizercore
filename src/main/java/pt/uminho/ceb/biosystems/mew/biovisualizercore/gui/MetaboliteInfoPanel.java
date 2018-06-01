@@ -114,7 +114,6 @@ public class MetaboliteInfoPanel extends javax.swing.JPanel implements IMetaboli
 	/**
 	 * Method that displays the mebaolite information.
 	 * @param nodeLay
-	 * @param reactions
 	 */
 	public void putMetaboliteInfo(INodeLay nodeLay) {
 

@@ -37,7 +37,7 @@ protected BasicStroke[] defaultStroke = new BasicStroke[]{
     /**
      * .
      * @param group the data group to process
-     * @param defaultStroke the default Stroke to assign
+     * @param defaultStrokes the default Stroke to assign
      */
     public BioVisualizerStrokeAction(String group, Float[] defaultStrokes) {
         super(group);

@@ -424,24 +424,24 @@ public class BioVisualizerLayout extends Layout {
         return -1f;
     }
     
-    /**
-     * Get the referrer item to use to set x or y coordinates that are
-     * initialized to NaN.
-     * @return the referrer item.
-     * @see prefuse.util.PrefuseLib#setX(VisualItem, VisualItem, double)
-     * @see prefuse.util.PrefuseLib#setY(VisualItem, VisualItem, double)
-     */
+//    /**
+//     * Get the referrer item to use to set x or y coordinates that are
+//     * initialized to NaN.
+//     * @return the referrer item.
+//     * @see prefuse.util.PrefuseLib#setX(VisualItem, VisualItem, double)
+//     * @see prefuse.util.PrefuseLib#setY(VisualItem, VisualItem, double)
+//     */
 //    public VisualItem getReferrer() {
 //        return referrer;
 //    }
     
-    /**
-     * Set the referrer item to use to set x or y coordinates that are
-     * initialized to NaN.
-     * @param referrer the referrer item to use.
-     * @see prefuse.util.PrefuseLib#setX(VisualItem, VisualItem, double)
-     * @see prefuse.util.PrefuseLib#setY(VisualItem, VisualItem, double)
-     */
+//    /**
+//     * Set the referrer item to use to set x or y coordinates that are
+//     * initialized to NaN.
+//     * @param referrer the referrer item to use.
+//     * @see prefuse.util.PrefuseLib#setX(VisualItem, VisualItem, double)
+//     * @see prefuse.util.PrefuseLib#setY(VisualItem, VisualItem, double)
+//     */
 //    public void setReferrer(VisualItem referrer) {
 //        this.referrer = referrer;
 //    }

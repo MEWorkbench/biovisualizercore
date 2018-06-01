@@ -62,17 +62,17 @@ public class BioVisualizerEdgeRenderer extends AbstractShapeRenderer{
 	        m_isctPoints[1] = new Point2D.Float();      
 	    }
 
-	    /**
-	     * Create a new EdgeRenderer with the given edge type.
-	     * @param edgeType the edge type, one of
-	     * {@link prefuse.Constants#EDGE_TYPE_LINE} or
-	     * {@link prefuse.Constants#EDGE_TYPE_CURVE}.
-	     */
+//	    /**
+//	     * Create a new EdgeRenderer with the given edge type.
+//	     * @param edgeType the edge type, one of
+//	     * {@link prefuse.Constants#EDGE_TYPE_LINE} or
+//	     * {@link prefuse.Constants#EDGE_TYPE_CURVE}.
+//	     */
 //	    public EdgeRenderer2(int edgeType) {
 //	        this(edgeType;
 //	    }
 	    
-	    /**
+	    /*
 	     * Create a new EdgeRenderer with the given edge and arrow types.
 	     * @param edgeType the edge type, one of
 	     * {@link prefuse.Constants#EDGE_TYPE_LINE} or
@@ -294,7 +294,7 @@ public class BioVisualizerEdgeRenderer extends AbstractShapeRenderer{
 	        return StrokeLib.getDerivedStroke(item.getStroke(), m_curWidth);
 	    }
 
-	    /**
+	    /*
 	     * Determines the control points to use for cubic (Bezier) curve edges. 
 	     * Override this method to provide custom curve specifications.
 	     * To reduce object initialization, the entries of the Point2D array are

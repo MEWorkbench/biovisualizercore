@@ -202,7 +202,7 @@ public class BioVisualizerConvEdgeRenderer extends AbstractShapeRenderer{
 		}
 	}
 
-	/**
+	/*
 	 * Returns an affine transformation that maps the arrowhead shape
 	 * to the position and orientation specified by the provided
 	 * line segment end points.
@@ -310,7 +310,7 @@ public class BioVisualizerConvEdgeRenderer extends AbstractShapeRenderer{
 		return StrokeLib.getDerivedStroke(item.getStroke(), m_curWidth);
 	}
 
-	/**
+	/*
 	 * Determines the control points to use for cubic (Bezier) curve edges. 
 	 * Override this method to provide custom curve specifications.
 	 * To reduce object initialization, the entries of the Point2D array are

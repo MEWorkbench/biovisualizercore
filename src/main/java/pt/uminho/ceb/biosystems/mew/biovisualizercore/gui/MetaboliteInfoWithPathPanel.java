@@ -149,7 +149,6 @@ public class MetaboliteInfoWithPathPanel extends JPanel implements TableModelLis
 	 * Method that displays the metabolite information.
 	 * 
 	 * @param nodeLay
-	 * @param reactions
 	 */
 	public void putMetaboliteInfo(INodeLay nodeLay) {
 		metabolitesIds = nodeLay.getIds();

@@ -22,7 +22,7 @@ public class BVAggregateLayout extends Layout {
         super(aggrGroup);
     }
     
-    /**
+    /*
      * @see edu.berkeley.guir.prefuse.action.Action#run(edu.berkeley.guir.prefuse.ItemRegistry, double)
      */
     public void run(double frac) {

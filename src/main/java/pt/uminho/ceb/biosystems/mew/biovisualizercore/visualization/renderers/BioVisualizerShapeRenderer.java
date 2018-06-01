@@ -25,7 +25,7 @@ public class BioVisualizerShapeRenderer extends AbstractShapeRenderer {
     public BioVisualizerShapeRenderer() {
     }
     
-    /**
+    /*
      * Creates a new ShapeRenderer with given base size.
      * @param size the base size in pixels
      */
@@ -33,7 +33,7 @@ public class BioVisualizerShapeRenderer extends AbstractShapeRenderer {
        setBaseSize(width, height);
     }
     
-    /**
+    /*
      * Sets the base size, in pixels, for shapes drawn by this renderer. The
      * base size is the width and height value used when a VisualItem's size
      * value is 1. The base size is scaled by the item's size value to arrive
@@ -45,10 +45,10 @@ public class BioVisualizerShapeRenderer extends AbstractShapeRenderer {
         this.width = width;
     }
     
-    /**
-     * Returns the base size, in pixels, for shapes drawn by this renderer.
-     * @return the base size in pixels
-     */
+//    /**
+//     * Returns the base size, in pixels, for shapes drawn by this renderer.
+//     * @return the base size in pixels
+//     */
 //    public int getBaseSize() {
 //        return m_baseSize;
 //    }

@@ -158,7 +158,7 @@ public class VisualizationProperties {
 	
 	/**
 	 * Sets the property that defines the font size of the metabolite nodes.
-	 * @param size
+	 * @param metaboliteFontSize
 	 */
 	public void setMetaboliteFontColor(int metaboliteFontSize) {
 		this.metaboliteFontColor = metaboliteFontSize;
