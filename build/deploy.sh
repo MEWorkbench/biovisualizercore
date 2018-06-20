@@ -1,21 +1,6 @@
-MEWORKBENCH_VERSION=1.0.3
-
 
 #This variable must be iqual to id in distributionManagement.repository/snapshotRepository on pom.xml
 DEPLOYMENT_REPO_ID="oss.sonatype.org"
-
-
-echo DEPLOY_FLAG: $1
-if [ $1 = "master" ]; then
-	MEWORKBENCH_VERSION=$MEWORKBENCH_VERSION
-else
-	MEWORKBENCH_VERSION=${MEWORKBENCH_VERSION}-SNAPSHOT
-fi
-echo VERSION: $MEWORKBENCH_VERSION
-
-#echo OSS_SONATYPE_USER $OSS_SONATYPE_USER
-#echo OSS_SONATYPE_PASS $OSS_SONATYPE_PASS
-
 
 
 H2_HOME=$HOME/.deploym2
