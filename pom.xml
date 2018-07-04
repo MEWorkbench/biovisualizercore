@@ -8,7 +8,48 @@
 	<packaging>jar</packaging>
 
 	<name>biovisualizercore</name>
-	<url>http://maven.apache.org</url>
+	<description>Biovisualizer for MEWorkbench</description>
+	<url>https://github.com/MEWorkbench/biovisualizercore</url>
+
+	<developers>
+		<developer>
+			<name>Paulo Maia</name>
+			<email>pmaia@silicolife.com</email>
+			<organization>SilicoLife Lda</organization>
+			<organizationUrl>http://www.silicolife.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Pedro Evangelista</name>
+			<email>pevangelista@silicolife.com</email>
+			<organization>SilicoLife Lda</organization>
+			<organizationUrl>http://www.silicolife.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Paulo Vilaca</name>
+			<email>hgiesteira@silicolife.com</email>
+			<organization>SilicoLife Lda</organization>
+			<organizationUrl>http://www.silicolife.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Hugo Giesteira</name>
+			<email>hgiesteira@silicolife.com</email>
+			<organization>SilicoLife Lda</organization>
+			<organizationUrl>http://www.silicolife.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Miguel Rocha</name>
+			<email>mrocha@di.uminho.pt</email>
+			<organization>University of Minho</organization>
+			<organizationUrl>https://www.uminho.pt</organizationUrl>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>LGPLv2.1</name>
+			<url>https://www.gnu.org/licenses/lgpl-2.1.html</url>
+		</license>
+	</licenses>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -17,7 +58,12 @@
 		<project.sign.skip>true</project.sign.skip>
 		<meworkbench.version>1.1.0</meworkbench.version>
 	</properties>
-
+	
+	<scm>
+		<developerConnection>https://github.com/MEWorkbench/biovizualizercore.git</developerConnection>
+		<url>https://github.com/MEWorkbench/biovizualizercore</url>
+	</scm>
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
