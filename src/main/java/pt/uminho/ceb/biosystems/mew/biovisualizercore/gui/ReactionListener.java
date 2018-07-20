@@ -4,6 +4,6 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.gui.listeners.ReactionEven
 
 public interface ReactionListener {
 	
-	void reactionChanged(ReactionEvent event);
+	public void reactionChanged(ReactionEvent event);
 	
 }

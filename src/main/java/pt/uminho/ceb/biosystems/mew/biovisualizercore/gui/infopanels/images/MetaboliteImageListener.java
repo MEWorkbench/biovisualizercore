@@ -20,7 +20,6 @@ public class MetaboliteImageListener extends ImagePanel implements MetaboliteLis
 	@Override
 	public void metaboliteChanged(MetaboliteEvent event) {
 		
-		System.out.println(event.getLabel() + "\t" + event.getIds() + "\t" + event.getUuid());
 		populateImages(new HashSet(Arrays.asList(event.getUuid())));
 	}
 

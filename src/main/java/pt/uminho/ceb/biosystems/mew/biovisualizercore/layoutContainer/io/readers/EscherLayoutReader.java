@@ -30,6 +30,7 @@ import pt.uminho.ceb.biosystems.mew.biovisualizercore.layoutContainer.interfaces
 
 public class EscherLayoutReader implements ILayoutBuilder{
 
+	Double readFactor = 0.5;
 	
 	private InputStream stream;
 	private Map<String, INodeLay> nodes;
@@ -77,14 +78,15 @@ public class EscherLayoutReader implements ILayoutBuilder{
 			String id = entry.getKey();
 			JsonNode n = entry.getValue();
 			
+			
 			String name = n.get("name").asText();
 			Boolean rev = n.get("reversibility").asBoolean();
 			String biggId = n.get("bigg_id").asText();
 			
 			List<JsonNode> to = n.findValues("to_node_id");
 			List<JsonNode> from = n.findValues("from_node_id");
-			Double x = n.get("label_x").asDouble();
-			Double y = n.get("label_y").asDouble();
+			Double x = n.get("label_x").asDouble() * readFactor;
+			Double y = n.get("label_y").asDouble() * readFactor;
 			
 			
 			JsonNode metab = n.get("metabolites");
@@ -118,7 +120,6 @@ public class EscherLayoutReader implements ILayoutBuilder{
 			String id = n.asText();
 			INodeLay nl = nodes.get(id);
 			if(nl!=null){
-				System.out.println(nl.getIds());
 				if(stoiq.get(0).containsAll(nl.getIds()))
 					reactants.put(nl.getUniqueId(), nl);
 				if(stoiq.get(1).containsAll(nl.getIds()))
@@ -163,8 +164,8 @@ public class EscherLayoutReader implements ILayoutBuilder{
 			String id = entry.getKey();
 			JsonNode n = entry.getValue();
 			String type = n.get("node_type").asText();
-			double x = n.get("x").asDouble();
-			double y = n.get("y").asDouble();
+			double x = n.get("x").asDouble() * readFactor;
+			double y = n.get("y").asDouble() * readFactor;
 		
 			JsonNode jname = n.get("name");
 			String name = (jname != null)?jname.asText():null;
@@ -174,7 +175,6 @@ public class EscherLayoutReader implements ILayoutBuilder{
 			
 			JsonNode jBigg = n.get("bigg_id");
 			String bigg_id = (jBigg!=null)?jBigg.asText():null;
-			System.out.println(id);
 			addNode(id,type, name, bigg_id, isPr, x, y);
 		}
 	}
@@ -199,7 +199,7 @@ public class EscherLayoutReader implements ILayoutBuilder{
 		}
 		NodeLay n = new NodeLay(id, name, linkIds, nodeType , x, y);
 		
-		System.out.printf("%s %s %s %s %s\n", id, name, linkIds, nodeType , x, y);
+//		System.out.printf("%s %s %s %s %s\n", id, name, linkIds, nodeType , x, y);
 		this.nodes.put(n.getUniqueId(), n);
 		
 	}
