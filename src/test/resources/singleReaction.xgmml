@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph xmlns="http://www.cs.rpi.edu/XGMML" xmlns:cy="http://www.cytoscape.org" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" directed="1" label="OptFlux Metabolic Network">
+  <att name="documentVersion" value="1.1"/>
+  <att name="networkMetadata">
+    <rdf:RDF>
+      <rdf:Description rdf:about="http://optflux.org/">
+        <dc:type>Metabolic Network</dc:type>
+        <dc:description>N/A</dc:description>
+        <dc:identifier>N/A</dc:identifier>
+        <dc:date>Fri May 10 10:29:10 WEST 2019</dc:date>
+        <dc:tittle>Network</dc:tittle>
+        <dc:source>http://http://optflux.org/</dc:source>
+        <dc:format>OptFlux - XGMML</dc:format>
+      </rdf:Description>
+    </rdf:RDF>
+  </att>
+  <att name="backgroundColor" type="string" value="#ffffff"/>
+  <att name="GRAPH_VIEW_ZOOM" type="real" value="1.0"/>
+  <att name="GRAPH_VIEW_CENTER_X" type="real" value="0.0"/>
+  <att name="GRAPH_VIEW_CENTER_Y" type="real" value="0.0"/>
+  <att name="NODE_SIZE_LOCKED" type="boolean" value="true"/>
+  <node id="38dca0e2-0f99-4cc0-9252-b987211bce02" label="node1">
+    <att name="Opt_MetabolicId" type="string" value="R"/>
+    <att name="Opt_NodeType" type="string" value="Opt_Reaction"/>
+    <att name="Reversible" type="boolean" value="false"/>
+    <graphics cy:boderLineType="solid" cy:nodeLabel="R" cy:nodeLabelFont="Default-0-12" cy:nodeTransparency="1.0" fill="#000000" h="20.0" outline="#666666" type="ELLIPSE" w="20.0" width="1" x="-42.85349228893699" y="-31.101708709469705"/>
+  </node>
+  <node id="be697607-43eb-432e-8eed-49d951dfcbf4" label="node2">
+    <att name="Opt_MetabolicId" type="string" value="a"/>
+    <att name="Opt_NodeType" type="string" value="Opt_HUB"/>
+    <graphics cy:boderLineType="solid" cy:nodeLabel="a" cy:nodeLabelFont="Default-0-12" cy:nodeTransparency="1.0" fill="#00CC00" h="20.0" outline="#666666" type="ELLIPSE" w="20.0" width="1" x="-69.2613718442106" y="-54.541907059518905"/>
+  </node>
+  <node id="7ca0b817-66b3-4269-859c-d9de5e80c89d" label="node3">
+    <att name="Opt_MetabolicId" type="string" value="A"/>
+    <att name="Opt_NodeType" type="string" value="Opt_Metabolite"/>
+    <graphics cy:boderLineType="solid" cy:nodeLabel="A" cy:nodeLabelFont="Default-0-12" cy:nodeTransparency="1.0" fill="#00CC00" h="20.0" outline="#666666" type="ELLIPSE" w="40.0" width="1" x="-101.0685413067157" y="-19.306418710392023"/>
+  </node>
+  <node id="5c12718d-e086-423e-99f0-e68eacc36b5a" label="node4">
+    <att name="Opt_MetabolicId" type="string" value="B"/>
+    <att name="Opt_NodeType" type="string" value="Opt_Metabolite"/>
+    <graphics cy:boderLineType="solid" cy:nodeLabel="B" cy:nodeLabelFont="Default-0-12" cy:nodeTransparency="1.0" fill="#00CC00" h="20.0" outline="#666666" type="ELLIPSE" w="40.0" width="1" x="10.945988481344045" y="-22.51537248866279"/>
+  </node>
+  <node id="c876fe03-7ea9-469d-8f9a-2c060ece5c30" label="node5">
+    <att name="Opt_MetabolicId" type="string" value="b"/>
+    <att name="Opt_NodeType" type="string" value="Opt_HUB"/>
+    <graphics cy:boderLineType="solid" cy:nodeLabel="b" cy:nodeLabelFont="Default-0-12" cy:nodeTransparency="1.0" fill="#00CC00" h="20.0" outline="#666666" type="ELLIPSE" w="20.0" width="1" x="-5.204810200432576" y="-59.12178923147411"/>
+  </node>
+  <edge label="node3 (DirectedEdge) node1" source="7ca0b817-66b3-4269-859c-d9de5e80c89d" target="38dca0e2-0f99-4cc0-9252-b987211bce02">
+    <att cy:editable="false" name="interaction" type="string" value="DirectedEdge"/>
+    <graphics cy:curved="STRAIGHT_LINES" cy:edgeLabel="" cy:edgeLabelFont="Default-0-10" cy:edgeLineType="SOLID" cy:sourceArrow="0" cy:sourceArrowColor="#000000" cy:targetArrow="0" cy:targetArrowColor="#000000" fill="#0000ff" widht="1"/>
+  </edge>
+  <edge label="node2 (DirectedEdge) node1" source="be697607-43eb-432e-8eed-49d951dfcbf4" target="38dca0e2-0f99-4cc0-9252-b987211bce02">
+    <att cy:editable="false" name="interaction" type="string" value="DirectedEdge"/>
+    <graphics cy:curved="STRAIGHT_LINES" cy:edgeLabel="" cy:edgeLabelFont="Default-0-10" cy:edgeLineType="SOLID" cy:sourceArrow="0" cy:sourceArrowColor="#000000" cy:targetArrow="0" cy:targetArrowColor="#000000" fill="#0000ff" widht="1"/>
+  </edge>
+  <edge label="node1 (DirectedEdge) node4" source="38dca0e2-0f99-4cc0-9252-b987211bce02" target="5c12718d-e086-423e-99f0-e68eacc36b5a">
+    <att cy:editable="false" name="interaction" type="string" value="DirectedEdge"/>
+    <graphics cy:curved="STRAIGHT_LINES" cy:edgeLabel="" cy:edgeLabelFont="Default-0-10" cy:edgeLineType="SOLID" cy:sourceArrow="0" cy:sourceArrowColor="#000000" cy:targetArrow="0" cy:targetArrowColor="#000000" fill="#0000ff" widht="1"/>
+  </edge>
+  <edge label="node1 (DirectedEdge) node5" source="38dca0e2-0f99-4cc0-9252-b987211bce02" target="c876fe03-7ea9-469d-8f9a-2c060ece5c30">
+    <att cy:editable="false" name="interaction" type="string" value="DirectedEdge"/>
+    <graphics cy:curved="STRAIGHT_LINES" cy:edgeLabel="" cy:edgeLabelFont="Default-0-10" cy:edgeLineType="SOLID" cy:sourceArrow="0" cy:sourceArrowColor="#000000" cy:targetArrow="0" cy:targetArrowColor="#000000" fill="#0000ff" widht="1"/>
+  </edge>
+</graph>

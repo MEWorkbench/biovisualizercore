@@ -22,9 +22,15 @@ public class EscherLayoutWriter {
 	Map<Integer,String> midmarker;
 	Map<Integer, String> nodesIds;
 	int id=0;
+	double racio;
 	
 	public EscherLayoutWriter(OutputStream out){
+		this(out, 2.0);
+	}
+	
+	public EscherLayoutWriter(OutputStream out, double racio){
 		this.out = out;
+		this.racio = racio;
 	}
 
 	public void write(ILayout cont) throws IOException{
@@ -35,7 +41,7 @@ public class EscherLayoutWriter {
 		node.setPrettyPrinter(new DefaultPrettyPrinter());
 		node.writeStartArray();
 		node.writeStartObject();
-		node.writeStringField("map_name", "ola");
+		node.writeStringField("map_name", "");
 		node.writeStringField("map_id", "");
 		node.writeStringField("map_description", "");
 		node.writeStringField("homepage", "www.optflux.org");
@@ -57,6 +63,10 @@ public class EscherLayoutWriter {
 		node.close();
 	}
 
+	double convert(double p) {
+		return p*racio;
+	}
+	
 	private void writeMetabolites(JsonGenerator node, Map<String, INodeLay> nodes, Map<String, IReactionLay> reactions) throws IOException {
 		node.writeFieldName("nodes");
 		node.writeStartObject();
@@ -73,29 +83,29 @@ public class EscherLayoutWriter {
 			node.writeObjectFieldStart(id);
 			node.writeObjectField("node_is_primary", is_primary);
 			node.writeStringField("name", name);
-			node.writeObjectField("label_x", x);
 			node.writeStringField("node_type", node_type);
-			node.writeObjectField("x", x);
-			node.writeObjectField("y", y);
 			node.writeStringField("bigg_id", bigg_id);
-			node.writeObjectField("label_y", y);
+			node.writeObjectField("x", convert(x));
+			node.writeObjectField("y", convert(y));
+			node.writeObjectField("label_x", convert(x-3));
+			node.writeObjectField("label_y", convert(y+3));
 			node.writeEndObject();
 		}
 		
 		for(Integer id : multimarketReactionId.keySet()){
 			IReactionLay reaction = reactions.get(multimarketReactionId.get(id));
 			node.writeObjectFieldStart(id+"");
-			node.writeObjectField("y", reaction.getY().intValue());
-			node.writeObjectField("x", reaction.getX().intValue());
 			node.writeStringField("node_type", "multimarker");
+			node.writeObjectField("y", convert(reaction.getY().intValue()));
+			node.writeObjectField("x", convert(reaction.getX().intValue()));
 			node.writeEndObject();
 		}
 		
 		for(Integer id : midmarker.keySet()){
 			IReactionLay reaction = reactions.get(midmarker.get(id));
 			node.writeObjectFieldStart(id+"");
-			node.writeObjectField("y", reaction.getY().intValue());
-			node.writeObjectField("x", reaction.getX().intValue());
+			node.writeObjectField("y", convert(reaction.getY().intValue()));
+			node.writeObjectField("x", convert(reaction.getX().intValue()));
 			node.writeStringField("node_type", "midmarker");
 			node.writeEndObject();
 		}
@@ -124,8 +134,8 @@ public class EscherLayoutWriter {
 			node.writeObjectField("reversibility", r.isReversible());
 
 			writeStoichiometry(node, r.getReactants(), r.getProducts(), nodesLay);
-			node.writeObjectField("label_x", x);
-			node.writeObjectField("label_y", y);
+			node.writeObjectField("label_x", convert(x));
+			node.writeObjectField("label_y", convert(y));
 			node.writeStringField("gene_reaction_rule", "");
 			node.writeEndObject();
 		}
